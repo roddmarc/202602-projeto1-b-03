@@ -1,0 +1,22 @@
+[
+  {
+    "id": 101,
+    "clienteId": 2,
+    "referencia": "2026-09",
+    "vencimento": "2026-10-10",
+    "valor": 168.4,
+    "economia": 29.72,
+    "status": "aberta",
+    "pixCopiaECola": "PIX-FICTICIO-0001"
+  },
+  {
+    "id": 102,
+    "clienteId": 1,
+    "referencia": "2026-10",
+    "vencimento": "2026-11-12",
+    "valor": 231.9,
+    "economia": 40.92,
+    "status": "prevista",
+    "pixCopiaECola": null
+  }
+]

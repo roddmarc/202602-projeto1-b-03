@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Marina Souza",
+    "cidade": "Contagem",
+    "dataAdesao": "2026-09-02",
+    "status": "em_conexao",
+    "canalPreferido": "whatsapp",
+    "whatsappConfirmado": false,
+    "emailConfirmado": true,
+    "consumoMedioKwh": 310,
+    "descontoPercentual": 15
+  },
+  {
+    "id": 2,
+    "nome": "João Pereira",
+    "cidade": "Belo Horizonte",
+    "dataAdesao": "2026-08-14",
+    "status": "conectado",
+    "canalPreferido": "email",
+    "whatsappConfirmado": true,
+    "emailConfirmado": true,
+    "consumoMedioKwh": 220,
+    "descontoPercentual": 15
+  },
+  {
+    "id": 3,
+    "nome": "Ana Ribeiro",
+    "cidade": "Uberlândia",
+    "dataAdesao": "2026-09-20",
+    "status": "aguardando_qualificacao",
+    "canalPreferido": "app",
+    "whatsappConfirmado": true,
+    "emailConfirmado": false,
+    "consumoMedioKwh": 180,
+    "descontoPercentual": 12
+  }
+]
