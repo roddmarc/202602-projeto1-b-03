@@ -1,19 +1,19 @@
-# [Nome da solução]
+# Onboarding Educativo com Simulador de Economia
 
 > Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026
-> Cliente: **Bulbe Energia** · Turma **[A/B]** · Squad **[XX]**
+> Cliente: **Bulbe Energia** · Turma **B** · Squad **03**
 
-[Uma frase que resume a solução: o que ela faz e para quem. Exemplo: "Painel que acompanha o cliente novo da Bulbe da adesão ao pagamento da primeira fatura."]
+Fluxo educativo integrado ao aplicativo da Bulbe que explica o funcionamento do produto e simula a economia na conta de luz para novos usuários antes do cadastro e para clientes já cadastrados, ajudando a aumentar a conversão e reduzir a inadimplência da primeira fatura e o churn por falta de entendimento do produto.
 
 ---
 
 ## 1. Problema
 
-[Qual parte da dor da Bulbe o squad escolheu atacar e por quê. Use pelo menos um dado da apresentação da Bulbe como evidência.]
+Fluxo de onboarding educativo que explica o funcionamento da Bulbe e simula a economia na conta de luz antes de solicitar o cadastro, ajudando novos usuários a entender o produto e tomar uma decisão mais consciente.
 
-- **Dor escolhida:** [ex.: clientes que não recebem ou não entendem a 1ª fatura]
-- **Evidência:** [ex.: cerca de 20% de falha na entrega de mensagens de WhatsApp]
-- **Indicador que a solução pretende mover:** [pagamento da 1ª fatura | churn do 1º mês | entregabilidade das comunicações]
+- **Dor escolhida:** Falta de entendimento do produto antes da adesão, com foco na redução do abandono de cadastro no aplicativo e na prevenção da inadimplência da primeira fatura.
+- **Evidência:** Segundo a apresentação da Bulbe Energia de setembro de 2026, 27,7% dos cancelamentos desde 2022 foram motivados pela falta de entendimento do produto, principal motivo de churn identificado. Além disso, a inadimplência da primeira fatura chegou a 32,4% no acumulado de setembro de 2025 a julho de 2026.
+- **Indicador que a solução pretende mover:** Principal: taxa de conclusão do cadastro no aplicativo. Secundários: inadimplência da primeira fatura e churn relacionado à falta de entendimento do produto.
 
 ## 2. Persona e jornada
 
@@ -67,15 +67,15 @@
 
 ## 7. Quadro do projeto
 
-- **GitHub Projects:** [link para o quadro do squad]
+- **GitHub Projects:** https://github.com/users/roddmarc/projects/2/
 
 ## 8. Equipe
 
 | Integrante | GitHub | Papel principal |
 | --- | --- | --- |
-| [Nome] | [@usuario](https://github.com/usuario) | [ex.: Scrum Master, front-end, dados, documentação] |
-| [Nome] | [@usuario](https://github.com/usuario) | [ ] |
-| [Nome] | [@usuario](https://github.com/usuario) | [ ] |
+| Arthur Marcelino de Oliveira | [@artmol](https://github.com/artmol) | [ex.: Scrum Master, front-end, dados, documentação] |
+| Rodrigo Marcelino de Oliveira| [@roddmarc](https://github.com/usuario) | [ ] |
+| Gustavo Salles Pires | [@Gustavo-Salles](https://github.com/Gustavo-Salles) | [ ] |
 
 ## 9. Entregas
 
