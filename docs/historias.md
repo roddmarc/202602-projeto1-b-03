@@ -15,10 +15,23 @@
 ## Critérios de aceite
 
 ### HU01
-- [ ] [critério verificável]
+- [ ] A página deve apresentar uma explicação clara e objetiva da proposta de valor da Bulbe.
+- [ ] O conteúdo deve explicar que o serviço busca proporcionar economia na conta de luz.
+- [ ] As informações devem estar organizadas de forma legível e compreensível.
+- [ ] Deve existir uma forma clara de avançar para conhecer melhor o serviço ou iniciar o cadastro.
 ### HU02
-- [ ] [critério verificável]
+- [ ] O usuário deve conseguir acessar o fluxo educativo antes de iniciar o cadastro.
+- [ ] O fluxo deve apresentar uma explicação sobre o funcionamento do serviço.
+- [ ] O conteúdo deve responder às principais dúvidas identificadas na jornada, incluindo a relação com a distribuidora e a possibilidade de cobranças.
+- [ ] Deve existir uma opção para o usuário avançar para o cadastro após consultar as explicações.
 ### HU03
-- [ ] [critério verificável]
+- [ ] A tela deve explicar visualmente como funciona a economia proporcionada pelo serviço.
+- [ ] Deve esclarecer a relação entre a Bulbe e a distribuidora de energia.
+- [ ] Deve informar se é necessário realizar instalações físicas para utilizar o serviço.
+- [ ] As explicações devem ser apresentadas de maneira clara, sem depender exclusivamente de textos longos.
 ### HU04
-- [ ] [critério verificável]
+- [ ] O cliente deve conseguir acessar o conteúdo educativo após a adesão.
+- [ ] A tela deve apresentar explicações sobre as cobranças relacionadas ao serviço.
+- [ ] O cliente deve conseguir utilizar novamente a calculadora de economia.
+- [ ] A calculadora deve permitir inserir os dados necessários e apresentar uma estimativa de economia.
+- [ ] O conteúdo deve ajudar o cliente a compreender os valores cobrados e a avaliar a continuidade do serviço.
