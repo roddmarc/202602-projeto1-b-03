@@ -18,4 +18,7 @@
 
 ## Oportunidades registradas como Issues
 
-- [ ] #[número] [título da oportunidade]****
+- [ ] #1 Apresentar a proposta de valor da Bulbe de forma simples e direta****
+- [ ] #2 Inserir um fluxo educativo antes do cadastro****
+- [ ] #3 Explicar visualmente a origem da economia e o funcionamento do serviço****
+- [ ] #4 Disponibilizar o fluxo educativo para clientes logados****
