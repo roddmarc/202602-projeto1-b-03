@@ -4,7 +4,6 @@
 
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
-| HU01 | Como [persona], quero [ação] para [benefício]. | [ ] | [alta/média/baixa] | #[ ] |
 | HU01 | Como potencial cliente da Bulbe, quero conhecer de forma simples e direta a proposta de valor do serviço para entender como posso economizar na conta de luz. | Descoberta — Apresentar a proposta de valor da Bulbe de forma simples e direta. | média | #[ ] |
 | --- | --- | --- | --- | --- |
 | HU02 | Como novo usuário da Bulbe, quero conhecer o funcionamento do serviço e esclarecer minhas principais dúvidas antes de realizar o cadastro para me sentir mais seguro ao aderir. | Primeiro acesso — Inserir um fluxo educativo antes do cadastro, explicando o serviço e respondendo às principais dúvidas. | alta | #[ ] |
