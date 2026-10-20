@@ -14,24 +14,34 @@
 
 ## Critérios de aceite
 
-### HU01
-- [ ] A página deve apresentar uma explicação clara e objetiva da proposta de valor da Bulbe.
-- [ ] O conteúdo deve explicar que o serviço busca proporcionar economia na conta de luz.
-- [ ] As informações devem estar organizadas de forma legível e compreensível.
-- [ ] Deve existir uma forma clara de avançar para conhecer melhor o serviço ou iniciar o cadastro.
-### HU02
-- [ ] O usuário deve conseguir acessar o fluxo educativo antes de iniciar o cadastro.
-- [ ] O fluxo deve apresentar uma explicação sobre o funcionamento do serviço.
-- [ ] O conteúdo deve responder às principais dúvidas identificadas na jornada, incluindo a relação com a distribuidora e a possibilidade de cobranças.
-- [ ] Deve existir uma opção para o usuário avançar para o cadastro após consultar as explicações.
-### HU03
-- [ ] A tela deve explicar visualmente como funciona a economia proporcionada pelo serviço.
-- [ ] Deve esclarecer a relação entre a Bulbe e a distribuidora de energia.
-- [ ] Deve informar se é necessário realizar instalações físicas para utilizar o serviço.
-- [ ] As explicações devem ser apresentadas de maneira clara, sem depender exclusivamente de textos longos.
-### HU04
-- [ ] O cliente deve conseguir acessar o conteúdo educativo após a adesão.
-- [ ] A tela deve apresentar explicações sobre as cobranças relacionadas ao serviço.
-- [ ] O cliente deve conseguir utilizar novamente a calculadora de economia.
-- [ ] A calculadora deve permitir inserir os dados necessários e apresentar uma estimativa de economia.
-- [ ] O conteúdo deve ajudar o cliente a compreender os valores cobrados e a avaliar a continuidade do serviço.
+### HU01 — Onboarding educativo
+
+- [ ] A página deve explicar de forma clara e objetiva como funciona o serviço da Bulbe.
+- [ ] Deve informar que não é necessário instalar placas solares ou realizar obras no imóvel.
+- [ ] Deve apresentar os principais requisitos para contratar o serviço.
+- [ ] Deve explicar como o cliente pode economizar na conta de energia.
+- [ ] Deve existir um botão para avançar ao cadastro após a apresentação do serviço.
+
+### HU02 — Cadastro orientado
+
+- [ ] A página deve apresentar as etapas necessárias para concluir o cadastro.
+- [ ] Deve existir um indicador visual de progresso durante o preenchimento.
+- [ ] Cada informação solicitada deve possuir uma explicação clara sobre sua finalidade.
+- [ ] Os campos obrigatórios devem ser identificados e validados antes de avançar.
+- [ ] O usuário deve conseguir navegar entre as etapas sem perder os dados já preenchidos.
+
+### HU03 — Simulador de economia
+
+- [ ] A página deve permitir que o usuário informe o valor médio mensal da sua conta de energia.
+- [ ] O sistema deve calcular e apresentar uma estimativa de economia mensal e anual.
+- [ ] Deve ficar claro que os valores apresentados são estimativas e podem variar.
+- [ ] A página deve informar que o início da economia depende da conclusão do processo de ativação.
+- [ ] O usuário deve conseguir visualizar o status da contratação e as próximas etapas até o início dos descontos.
+
+### HU04 — Painel de economia acumulada
+
+- [ ] A página deve apresentar o valor total economizado pelo cliente desde a contratação.
+- [ ] Deve exibir a economia individual de cada mês.
+- [ ] Deve apresentar um gráfico com a evolução da economia ao longo do tempo.
+- [ ] O usuário deve conseguir comparar os valores economizados em diferentes meses.
+- [ ] As informações financeiras devem ser apresentadas de forma clara, com valores em reais (R$).
