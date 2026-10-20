@@ -42,7 +42,7 @@
 
 ## Oportunidades registradas como Issues
 
-- [ ] #1 ****
-- [ ] #2 ****
-- [ ] #3 ****
-- [ ] #4 ****
+- [ ] #1 Onboarding educativo
+- [ ] #2 Cadastro orientado
+- [ ] #3 Simulador de economia
+- [ ] #4 Painel de economia acumulada
