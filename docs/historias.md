@@ -4,13 +4,13 @@
 
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
-| HU01 | Como potencial cliente da Bulbe, quero conhecer de forma simples e direta a proposta de valor do serviço para entender como posso economizar na conta de luz. | Descoberta — Apresentar a proposta de valor da Bulbe de forma simples e direta. | média | #[ ] |
+| HU01 | Como novo usuário, quero entender como funciona a Bulbe e quais são os requisitos para contratação antes de me cadastrar, para decidir com segurança se o serviço atende às minhas necessidades. | Onboarding educativo | alta | #[ ] |
 | --- | --- | --- | --- | --- |
-| HU02 | Como novo usuário da Bulbe, quero conhecer o funcionamento do serviço e esclarecer minhas principais dúvidas antes de realizar o cadastro para me sentir mais seguro ao aderir. | Primeiro acesso — Inserir um fluxo educativo antes do cadastro, explicando o serviço e respondendo às principais dúvidas. | alta | #[ ] |
+| HU02 | Como usuário interessado em contratar, quero visualizar as etapas do cadastro e entender por que meus dados são solicitados, para concluir a adesão com mais facilidade e confiança. |Cadastro orientado | alta | #[ ] |
 | --- | --- | --- | --- | --- |
-| HU03 | Como cliente da Bulbe, quero visualizar como a economia funciona, sua relação com a distribuidora e a necessidade ou não de instalações físicas para entender os benefícios do serviço. | Entendimento — Explicar visualmente a origem da economia, a relação com a distribuidora e a necessidade ou não de instalações físicas. | alta | #[ ] |
+| HU03 | Como cliente recém-contratado, quero visualizar uma estimativa da minha economia e acompanhar quando os descontos começarão, para entender os benefícios do serviço durante a espera pela ativação. | Simulador de economia | alta | #[ ] |
 | --- | --- | --- | --- | --- |
-| HU04 | Como cliente da Bulbe, quero consultar explicações sobre minhas cobranças e utilizar novamente a calculadora de economia para entender os valores e avaliar se vale a pena continuar com o serviço. | Pós-adesão — Disponibilizar o fluxo educativo para clientes logados, explicando as cobranças e permitindo consultar novamente a calculadora de economia. | alta | #[ ] |
+| HU04 | Como cliente ativo, quero acompanhar minha economia mensal e acumulada desde a contratação, para avaliar os benefícios financeiros e decidir se vale a pena continuar utilizando a Bulbe. | Painel de economia acumulada | alta | #[ ] |
 
 ## Critérios de aceite
 
