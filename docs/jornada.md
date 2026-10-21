@@ -14,10 +14,10 @@
 ### Persona 2 — Ricardo Almeida, 43 anos
 
 - **Nome e idade:** Ricardo Almeida, 43 anos
-- **Contexto:** Comerciante, proprietário de uma pequena loja em Contagem. Conheceu a Bulbe por indicação de um amigo e decidiu tentar contratar o serviço para reduzir seus gastos com energia. Tem familiaridade com aplicativos, mas pouco tempo disponível. Durante o cadastro, encontra diversas etapas, solicitações de informações pessoais e dados da conta de energia. Sem saber quanto tempo levará ou por que cada informação é necessária, considera abandonar o processo.
-- **Objetivo:** Realizar a contratação de maneira rápida, simples e segura, sabendo antecipadamente quais documentos e informações serão necessários.
-- **Medos e dúvidas:** "Por que preciso informar tantos dados? É seguro compartilhar minha conta de luz? Quanto tempo demora para concluir a contratação? Posso terminar o cadastro depois?"
-- **Canais que usa:** WhatsApp, Google, e-mail e aplicativos bancários.
+- **Contexto:** Administra sua loja e possui uma rotina corrida. Contratou a Bulbe para reduzir os gastos com energia, mas nem sempre consegue acompanhar as mensagens recebidas no WhatsApp.
+- **Objetivo:** Acompanhar os avisos importantes da Bulbe e não perder informações sobre a ativação, a cobrança e o pagamento.
+- **Medos e dúvidas:** “Será que a Bulbe tentou entrar em contato comigo?”, “Onde posso consultar os avisos que não recebi?” e “Meus dados de contato estão corretos?”
+- **Canais que usa:** WhatsApp, e-mail, aplicativos bancários e aplicativo da Bulbe.
 
 ### Persona 3 — Fernanda Oliveira, 35 anos
 
