@@ -22,13 +22,13 @@
 - [ ] Deve explicar como o cliente pode economizar na conta de energia.
 - [ ] Deve existir um botão para avançar ao cadastro após a apresentação do serviço.
 
-### HU02 — Cadastro orientado
+### HU02 — Central de comunicações
 
-- [ ] A página deve apresentar as etapas necessárias para concluir o cadastro.
-- [ ] Deve existir um indicador visual de progresso durante o preenchimento.
-- [ ] Cada informação solicitada deve possuir uma explicação clara sobre sua finalidade.
-- [ ] Os campos obrigatórios devem ser identificados e validados antes de avançar.
-- [ ] O usuário deve conseguir navegar entre as etapas sem perder os dados já preenchidos.
+- [ ] A página deve apresentar uma lista de comunicados enviados pela Bulbe, utilizando dados fictícios.
+- [ ] Cada comunicado deve apresentar título, data e conteúdo da mensagem.
+- [ ] Os comunicados não lidos devem possuir uma identificação visual.
+- [ ] O usuário deve conseguir abrir uma mensagem e marcá-la como lida.
+- [ ] Deve existir um formulário para consultar e confirmar os dados de contato, com validação em JavaScript.
 
 ### HU03 — Simulador de economia
 
