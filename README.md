@@ -73,8 +73,8 @@ Fluxo de onboarding educativo que explica o funcionamento da Bulbe e simula a ec
 
 | Integrante | GitHub | Papel principal |
 | --- | --- | --- |
-| Arthur Marcelino de Oliveira | [@artmol](https://github.com/artmol) | [ex.: Scrum Master, front-end, dados, documentação] |
-| Rodrigo Marcelino de Oliveira| [@roddmarc](https://github.com/usuario) | [ ] |
+| Arthur Marcelino de Oliveira | [@artmol](https://github.com/artmol) | [ ] |
+| Rodrigo Marcelino de Oliveira| [@roddmarc](https://github.com/roddmarc) | [ ] |
 | Gustavo Salles Pires | [@Gustavo-Salles](https://github.com/Gustavo-Salles) | [ ] |
 
 ## 9. Entregas
