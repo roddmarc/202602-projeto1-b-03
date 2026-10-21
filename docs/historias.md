@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | HU01 | Como novo usuário, quero entender como funciona a Bulbe e quais são os requisitos para contratação antes de me cadastrar, para decidir com segurança se o serviço atende às minhas necessidades. | Onboarding educativo | alta | #[ ] |
 | --- | --- | --- | --- | --- |
-| HU02 | Como usuário interessado em contratar, quero visualizar as etapas do cadastro e entender por que meus dados são solicitados, para concluir a adesão com mais facilidade e confiança. |Cadastro orientado | alta | #[ ] |
+| HU02 | Como cliente recém-contratado, quero consultar os avisos da Bulbe em uma central de comunicações e confirmar meus dados de contato, para não perder informações importantes sobre minha contratação e primeira fatura. | Central de comunicações | alta | #[ ] |
 | --- | --- | --- | --- | --- |
 | HU03 | Como cliente recém-contratado, quero visualizar uma estimativa da minha economia e acompanhar quando os descontos começarão, para entender os benefícios do serviço durante a espera pela ativação. | Simulador de economia | alta | #[ ] |
 | --- | --- | --- | --- | --- |
