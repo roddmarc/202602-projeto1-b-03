@@ -135,3 +135,105 @@ button:focus-visible {
 .botao-icone:focus-visible {
   outline-color: var(--cor-superficie);
 }
+
+/* O diálogo mantém o foco no menu enquanto ele estiver aberto. */
+.menu-lateral {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 375px;
+  max-width: 100%;
+  height: 667px;
+  height: min(667px, 100dvh);
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: rgb(16 6 80 / 22%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #536779;
+}
+
+.menu-lateral::backdrop {
+  background: transparent;
+}
+
+.menu-painel {
+  width: 66.6667%;
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 0 14px 0 0;
+  background: var(--cor-superficie);
+  box-shadow: 4px 0 0 rgb(0 0 0 / 12%);
+}
+
+.menu-cabecalho {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 104px;
+  border-bottom: 1px solid var(--cor-inativa);
+}
+
+.menu-logo {
+  width: 130px;
+  max-width: 75%;
+  height: auto;
+}
+
+.menu-fechar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 70px;
+  padding: 14px 12px 14px 20px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.menu-link img {
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+
+.menu-icone-economia {
+  flex: 0 0 24px;
+  height: 24px;
+  background: currentColor;
+  -webkit-mask: url("../img/economia.svg") center / contain no-repeat;
+  mask: url("../img/economia.svg") center / contain no-repeat;
+}
+
+.menu-link:hover {
+  background: #f3f4f8;
+}
+
+.menu-link:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: -3px;
+}
