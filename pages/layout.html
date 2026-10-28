@@ -8,12 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/layout.css">
+  <script src="../assets/js/layout.js" defer></script>
 </head>
 <body>
   <div class="app">
     <header class="app-cabecalho">
       <!-- Conecte os botões às ações da história que estiver desenvolvendo. -->
-      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu">
+      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-lateral" aria-expanded="false" aria-haspopup="dialog">
         <img src="../assets/img/menu.svg" width="21" height="17" alt="">
       </button>
 
@@ -48,6 +49,34 @@
         <span>Indicações</span>
       </button>
     </nav>
+    <dialog class="menu-lateral" id="menu-lateral" aria-label="Menu de histórias">
+      <div class="menu-painel">
+        <div class="menu-cabecalho">
+          <button class="menu-fechar" type="button" aria-label="Fechar menu" autofocus>
+            <span aria-hidden="true">×</span>
+          </button>
+          <img class="menu-logo" src="../assets/img/logo_menu.svg" alt="Bulbe — sua próxima energia">
+        </div>
+        <nav class="menu-links" aria-label="Histórias do aplicativo">
+          <a class="menu-link" href="onboarding.html">
+            <img src="../assets/img/onboarding.svg" width="24" height="24" alt="">
+            <span>Onboarding Educativo</span>
+          </a>
+          <a class="menu-link" href="simulador.html">
+            <img src="../assets/img/simulador.svg" width="24" height="24" alt="">
+            <span>Simulador de Economia</span>
+          </a>
+          <a class="menu-link" href="central.html">
+            <img src="../assets/img/comunicacoes.svg" width="24" height="24" alt="">
+            <span>Central de Comunicações</span>
+          </a>
+          <a class="menu-link menu-link-economia" href="painel.html">
+            <img src="../assets/img/economia.svg" width="24" height="24" alt="">
+            <span>Painel de Economia Acumulada</span>
+          </a>
+        </nav>
+      </div>
+    </dialog>
   </div>
 </body>
 </html>
