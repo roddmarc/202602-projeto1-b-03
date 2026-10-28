@@ -1,0 +1,137 @@
+:root {
+  --cor-primaria: #10069f;
+  --cor-inativa: #c2ccd6;
+  --cor-superficie: #fff;
+  --fonte: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cor-superficie);
+  font-family: var(--fonte);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Base de 375 × 667 px; em telas menores, acompanha o espaço disponível. */
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  max-width: 100%;
+  height: 667px;
+  height: min(667px, 100dvh);
+  margin-inline: auto;
+  overflow: hidden;
+  background: var(--cor-primaria);
+}
+
+.app-cabecalho {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 73px;
+  padding-inline: 6px 14px;
+}
+
+.app-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cabecalho-acoes {
+  display: flex;
+  gap: 6px;
+}
+
+.botao-icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.app-conteudo {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border-radius: 16px 16px 0 0;
+  background: var(--cor-superficie);
+}
+
+.app-navegacao {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  flex: 0 0 83px;
+  padding-inline: 12px;
+  background: var(--cor-superficie);
+  box-shadow: 0 -3px 10px rgb(0 0 0 / 7%);
+}
+
+.navegacao-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 18px 0 0;
+  border: 0;
+  background: transparent;
+  color: var(--cor-inativa);
+  font: 500 12px/1.2 var(--fonte);
+  cursor: pointer;
+}
+
+.navegacao-item[aria-current="page"] {
+  color: var(--cor-primaria);
+}
+
+.navegacao-item[aria-current="page"]::before {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  max-width: 100%;
+  height: 2px;
+  background: currentColor;
+  content: "";
+}
+
+/* A máscara reutiliza o SVG original e permite aplicar a cor do item ativo. */
+.icone-consumo {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: currentColor;
+  -webkit-mask: url("../img/consumo.svg") center / contain no-repeat;
+  mask: url("../img/consumo.svg") center / contain no-repeat;
+}
+
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+  border-radius: 4px;
+}
+
+.botao-icone:focus-visible {
+  outline-color: var(--cor-superficie);
+}

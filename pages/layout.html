@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Layout inicial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-cabecalho">
+      <!-- Conecte os botões às ações da história que estiver desenvolvendo. -->
+      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu">
+        <img src="../assets/img/menu.svg" width="21" height="17" alt="">
+      </button>
+
+      <img class="app-logo" src="../assets/img/logo.svg" width="100" height="29" alt="Bulbe">
+
+      <div class="cabecalho-acoes">
+        <button class="botao-icone" type="button" aria-label="Notificações">
+          <img src="../assets/img/notificacao.svg" width="40" height="40" alt="">
+        </button>
+        <button class="botao-icone" type="button" aria-label="Meu perfil">
+          <img src="../assets/img/perfil.svg" width="40" height="40" alt="">
+        </button>
+      </div>
+    </header>
+
+    <main class="app-conteudo" id="conteudo" aria-label="Conteúdo da página">
+      <!-- Insira aqui o conteúdo da sua história. -->
+    </main>
+
+    <nav class="app-navegacao" aria-label="Navegação principal">
+      <!-- Ao implementar as páginas, conecte os destinos e mova aria-current para o item ativo. -->
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/faturas.svg" width="24" height="24" alt="">
+        <span>Faturas</span>
+      </button>
+      <button class="navegacao-item" type="button" aria-current="page">
+        <span class="icone-consumo" aria-hidden="true"></span>
+        <span>Consumo</span>
+      </button>
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/indicacoes.svg" width="24" height="24" alt="">
+        <span>Indicações</span>
+      </button>
+    </nav>
+  </div>
+</body>
+</html>
