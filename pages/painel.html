@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Economia acumulada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/painel.css">
+  <script src="../assets/js/painel.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-cabecalho">
+      <!-- Conecte os botões às ações da história que estiver desenvolvendo. -->
+      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-lateral" aria-expanded="false" aria-haspopup="dialog">
+        <img src="../assets/img/menu.svg" width="21" height="17" alt="">
+      </button>
+
+      <img class="app-logo" src="../assets/img/logo.svg" width="100" height="29" alt="Bulbe">
+
+      <div class="cabecalho-acoes">
+        <button class="botao-icone" type="button" aria-label="Notificações">
+          <img src="../assets/img/notificacao.svg" width="40" height="40" alt="">
+        </button>
+        <button class="botao-icone" type="button" aria-label="Meu perfil">
+          <img src="../assets/img/perfil.svg" width="40" height="40" alt="">
+        </button>
+      </div>
+    </header>
+
+    <main class="app-conteudo painel" id="conteudo" aria-label="Painel de economia acumulada">
+      <h1 class="painel-titulo">Economia acumulada</h1>
+      <section class="painel-resumo" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Economia desde a adesão</h2>
+        <p class="painel-total" id="total-economia"></p>
+        <p class="painel-periodo">12 meses de economia</p>
+        <p class="painel-demo">Dados fictícios · jul/2025 a jun/2026</p>
+      </section>
+      <section class="painel-evolucao" aria-labelledby="titulo-grafico">
+        <h2 id="titulo-grafico">Evolução acumulada</h2>
+        <p class="painel-legenda" id="intervalo-grafico"></p>
+        <svg id="grafico-economia" viewBox="0 0 320 150" aria-labelledby="titulo-svg descricao-svg" role="group">
+          <title id="titulo-svg">Evolução da economia acumulada</title>
+          <desc id="descricao-svg">Selecione um ponto para consultar a economia mensal e o acumulado desde a adesão. Os mesmos dados estão na tabela de detalhes.</desc>
+          <g aria-hidden="true"><path xmlns="http://www.w3.org/2000/svg" d="M36 28H38M308 28H306M42 28H46M50 28H54M58 28H62M66 28H70M74 28H78M82 28H86M90 28H94M98 28H102M106 28H110M114 28H118M122 28H126M130 28H134M138 28H142M146 28H150M154 28H158M162 28H166M170 28H174M178 28H182M186 28H190M194 28H198M202 28H206M210 28H214M218 28H222M226 28H230M234 28H238M242 28H246M250 28H254M258 28H262M266 28H270M274 28H278M282 28H286M290 28H294M298 28H302" stroke="black" stroke-opacity="0.12" />
+<path xmlns="http://www.w3.org/2000/svg" d="M36 63H38M308 63H306M42 63H46M50 63H54M58 63H62M66 63H70M74 63H78M82 63H86M90 63H94M98 63H102M106 63H110M114 63H118M122 63H126M130 63H134M138 63H142M146 63H150M154 63H158M162 63H166M170 63H174M178 63H182M186 63H190M194 63H198M202 63H206M210 63H214M218 63H222M226 63H230M234 63H238M242 63H246M250 63H254M258 63H262M266 63H270M274 63H278M282 63H286M290 63H294M298 63H302" stroke="black" stroke-opacity="0.12" />
+<path xmlns="http://www.w3.org/2000/svg" d="M36 98H38M308 98H306M42 98H46M50 98H54M58 98H62M66 98H70M74 98H78M82 98H86M90 98H94M98 98H102M106 98H110M114 98H118M122 98H126M130 98H134M138 98H142M146 98H150M154 98H158M162 98H166M170 98H174M178 98H182M186 98H190M194 98H198M202 98H206M210 98H214M218 98H222M226 98H230M234 98H238M242 98H246M250 98H254M258 98H262M266 98H270M274 98H278M282 98H286M290 98H294M298 98H302" stroke="black" stroke-opacity="0.12" />
+</g>
+          <g id="grafico-dados"></g>
+        </svg>
+        <p class="painel-leitura" id="leitura-grafico" aria-live="polite"></p>
+        <div class="painel-filtros" aria-label="Período do gráfico">
+          <button class="painel-cartao" type="button" data-periodo="3" aria-pressed="false"><span>Últimos 3 meses</span><strong id="total-tres"></strong></button>
+          <button class="painel-cartao" type="button" data-periodo="6" aria-pressed="true"><span>Últimos 6 meses</span><strong id="total-seis"></strong></button>
+        </div>
+      </section>
+      <section class="painel-comparativo" aria-labelledby="titulo-comparativo">
+        <h2 id="titulo-comparativo">Comparativo de economia</h2>
+        <dl><div><dt>Últimos 3 meses</dt><dd id="comparativo-atual"></dd></div><div><dt>3 meses anteriores</dt><dd id="comparativo-anterior"></dd></div></dl>
+        <p id="comparativo-percentual"></p>
+      </section>
+      <button class="painel-detalhes-botao" id="abrir-detalhes" type="button" aria-haspopup="dialog" aria-controls="detalhes-economia">Ver detalhes de economia</button>
+      <dialog id="detalhes-economia" class="painel-dialogo" aria-labelledby="titulo-detalhes">
+        <div class="painel-dialogo-topo"><h2 id="titulo-detalhes">Detalhes de economia</h2><button id="fechar-detalhes" type="button" aria-label="Fechar detalhes" autofocus>×</button></div>
+        <p class="painel-demo">Valores fictícios para demonstração.</p>
+        <h3>Compare dois meses</h3>
+        <div class="painel-seletores"><label>Mês de referência<select id="mes-referencia"></select></label><label>Mês comparado<select id="mes-comparado"></select></label></div>
+        <p id="resultado-comparacao" class="painel-resultado" aria-live="polite"></p>
+        <table class="painel-tabela"><caption>Economia mensal desde a adesão</caption><thead><tr><th scope="col">Mês</th><th scope="col">Economia</th><th scope="col">Acumulado</th></tr></thead><tbody id="historico-mensal"></tbody><tfoot><tr><th scope="row" colspan="2">Total economizado</th><td id="total-historico"></td></tr></tfoot></table>
+      </dialog>
+    </main>
+
+    <nav class="app-navegacao" aria-label="Navegação principal">
+      <!-- Ao implementar as páginas, conecte os destinos e mova aria-current para o item ativo. -->
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/faturas.svg" width="24" height="24" alt="">
+        <span>Faturas</span>
+      </button>
+      <button class="navegacao-item" type="button" aria-current="page">
+        <span class="icone-consumo" aria-hidden="true"></span>
+        <span>Consumo</span>
+      </button>
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/indicacoes.svg" width="24" height="24" alt="">
+        <span>Indicações</span>
+      </button>
+    </nav>
+    <dialog class="menu-lateral" id="menu-lateral" aria-label="Menu de histórias">
+      <div class="menu-painel">
+        <div class="menu-cabecalho">
+          <button class="menu-fechar" type="button" aria-label="Fechar menu" autofocus>
+            <span aria-hidden="true">×</span>
+          </button>
+          <img class="menu-logo" src="../assets/img/logo_menu.svg" alt="Bulbe — sua próxima energia">
+        </div>
+        <nav class="menu-links" aria-label="Histórias do aplicativo">
+          <a class="menu-link" href="onboarding.html">
+            <img src="../assets/img/onboarding.svg" width="24" height="24" alt="">
+            <span>Onboarding Educativo</span>
+          </a>
+          <a class="menu-link" href="simulador.html">
+            <img src="../assets/img/simulador.svg" width="24" height="24" alt="">
+            <span>Simulador de Economia</span>
+          </a>
+          <a class="menu-link" href="central.html">
+            <img src="../assets/img/comunicacoes.svg" width="24" height="24" alt="">
+            <span>Central de Comunicações</span>
+          </a>
+          <a class="menu-link menu-link-economia" href="painel.html" aria-current="page">
+            <img src="../assets/img/economia.svg" width="24" height="24" alt="">
+            <span>Painel de Economia Acumulada</span>
+          </a>
+        </nav>
+      </div>
+    </dialog>
+  </div>
+</body>
+</html>
