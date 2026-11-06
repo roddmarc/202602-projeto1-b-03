@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Onboarding educativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/onboarding.css">
+  <script src="../assets/js/onboarding.js" defer></script>
+  <script src="../assets/js/layout.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-cabecalho">
+      <!-- Conecte os botões às ações da história que estiver desenvolvendo. -->
+      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-lateral" aria-expanded="false" aria-haspopup="dialog">
+        <img src="../assets/img/menu.svg" width="21" height="17" alt="">
+      </button>
+
+      <img class="app-logo" src="../assets/img/logo.svg" width="100" height="29" alt="Bulbe">
+
+      <div class="cabecalho-acoes">
+        <button class="botao-icone" type="button" aria-label="Notificações">
+          <img src="../assets/img/notificacao.svg" width="40" height="40" alt="">
+        </button>
+        <button class="botao-icone" type="button" aria-label="Meu perfil">
+          <img src="../assets/img/perfil.svg" width="40" height="40" alt="">
+        </button>
+      </div>
+    </header>
+
+    <main class="app-conteudo onboarding" id="conteudo" aria-label="Onboarding educativo">
+      <div class="onboarding-cabecalho">
+        <img class="onboarding-logo" src="../assets/img/logo_menu.svg" alt="Bulbe — sua próxima energia" width="122" height="41">
+        <div class="onboarding-progresso">
+          <progress id="progresso" max="3" value="1" aria-label="Progresso da apresentação"></progress>
+          <span id="etapa-atual" aria-live="polite" aria-atomic="true">1 de 3</span>
+        </div>
+      </div>
+      <div class="onboarding-etapas" id="etapas">
+        <section class="onboarding-etapa" aria-labelledby="titulo-conheca">
+          <img class="onboarding-ilustracao" src="../assets/img/onboarding-educativo/conheca.png" alt="Fazenda solar, rede de energia e casa conectadas" width="420" height="420">
+          <h1 id="titulo-conheca" tabindex="-1">Conheça a Bulbe</h1>
+          <p>A Bulbe conecta você à energia de fazendas solares para gerar créditos que ajudam a reduzir sua conta de luz.</p>
+          <ul class="onboarding-beneficios">
+            <li><span class="icone-etapa icone-sol" aria-hidden="true"></span><div><h2>Energia solar</h2><p>Fazendas solares geram eletricidade.</p></div></li>
+            <li><span class="icone-etapa icone-rede" aria-hidden="true"></span><div><h2>Rede elétrica</h2><p>A energia é enviada para a rede da distribuidora, que continua abastecendo seu imóvel.</p></div></li>
+            <li><span class="icone-etapa icone-economia" aria-hidden="true"></span><div><h2>Créditos de energia</h2><p>Os créditos compensam parte do consumo e ajudam a reduzir o custo da energia.</p></div></li>
+          </ul>
+        </section>
+        <section class="onboarding-etapa" aria-labelledby="titulo-economize" hidden>
+          <img class="onboarding-ilustracao" src="../assets/img/onboarding-educativo/economize.png" alt="Casa abastecida pela rede elétrica, sem painéis solares no telhado" width="384" height="384">
+          <h1 id="titulo-economize" tabindex="-1">Economize sem instalar placas solares.</h1>
+          <p>Você não precisa instalar equipamentos em casa nem fazer obras. A economia acontece conforme as condições do seu contrato.</p>
+          <ul class="onboarding-beneficios">
+            <li><span class="icone-etapa icone-casa" aria-hidden="true"></span><div><h2>Sem obras</h2><p>Não é necessário instalar painéis solares na sua casa.</p></div></li>
+            <li><span class="icone-etapa icone-celular" aria-hidden="true"></span><div><h2>Adesão digital</h2><p>Você pode iniciar o processo pelo aplicativo.</p></div></li>
+            <li><span class="icone-etapa icone-economia" aria-hidden="true"></span><div><h2>Economia na conta</h2><p>Os créditos elegíveis ajudam a reduzir o custo da energia. O desconto depende das condições contratadas.</p></div></li>
+          </ul>
+        </section>
+        <section class="onboarding-etapa" aria-labelledby="titulo-comece" hidden>
+          <img class="onboarding-ilustracao" src="../assets/img/onboarding-educativo/comece.png" alt="Conta de energia e moeda representando economia" width="336" height="336">
+          <h1 id="titulo-comece" tabindex="-1">Começar é simples.</h1>
+          <p>Conheça as etapas para contratar o serviço e acompanhe o processo até a ativação.</p>
+          <ol class="onboarding-beneficios">
+            <li><span class="icone-etapa icone-check" aria-hidden="true"></span><div><h2>1. Confira os requisitos</h2><p>Verifique se seu endereço e sua instalação são atendidos. O cadastro deve ser feito em nome do titular da conta de luz, com seu CPF, telefone e e-mail.</p></div></li>
+            <li><span class="icone-etapa icone-adesao" aria-hidden="true"></span><div><h2>2. Faça sua adesão</h2><p>Preencha os dados solicitados, valide seu cadastro e leia e aceite o termo de adesão.</p></div></li>
+            <li><span class="icone-etapa icone-relogio" aria-hidden="true"></span><div><h2>3. Aguarde a ativação</h2><p>Acompanhe as atualizações por e-mail e WhatsApp até o início da economia.</p></div></li>
+          </ol>
+          <p class="onboarding-fonte">Confira as condições nas <a href="https://bulbeenergia.com.br/duvidas/" target="_blank" rel="noopener noreferrer">dúvidas frequentes da Bulbe</a>.</p>
+        </section>
+      </div>
+      <div class="onboarding-acoes">
+        <button class="onboarding-botao onboarding-avancar" id="avancar" type="button">Entenda a Economia</button>
+        <p class="cadastro-aviso" id="cadastro-aviso" hidden>Cadastro indisponível neste protótipo.</p>
+        <button class="onboarding-botao onboarding-voltar" id="voltar" type="button"><span class="icone-voltar" aria-hidden="true"></span> Voltar</button>
+      </div>
+    </main>
+
+    <nav class="app-navegacao" aria-label="Navegação principal">
+      <!-- Ao implementar as páginas, conecte os destinos e mova aria-current para o item ativo. -->
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/faturas.svg" width="24" height="24" alt="">
+        <span>Faturas</span>
+      </button>
+      <button class="navegacao-item" type="button" aria-current="page">
+        <span class="icone-consumo" aria-hidden="true"></span>
+        <span>Consumo</span>
+      </button>
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/indicacoes.svg" width="24" height="24" alt="">
+        <span>Indicações</span>
+      </button>
+    </nav>
+    <dialog class="menu-lateral" id="menu-lateral" aria-label="Menu de histórias">
+      <div class="menu-painel">
+        <div class="menu-cabecalho">
+          <button class="menu-fechar" type="button" aria-label="Fechar menu" autofocus>
+            <span aria-hidden="true">×</span>
+          </button>
+          <img class="menu-logo" src="../assets/img/logo_menu.svg" alt="Bulbe — sua próxima energia">
+        </div>
+        <nav class="menu-links" aria-label="Histórias do aplicativo">
+          <a class="menu-link" href="onboarding.html" aria-current="page">
+            <img src="../assets/img/onboarding.svg" width="24" height="24" alt="">
+            <span>Onboarding Educativo</span>
+          </a>
+          <a class="menu-link" href="simulador.html">
+            <img src="../assets/img/simulador.svg" width="24" height="24" alt="">
+            <span>Simulador de Economia</span>
+          </a>
+          <a class="menu-link" href="central.html">
+            <img src="../assets/img/comunicacoes.svg" width="24" height="24" alt="">
+            <span>Central de Comunicações</span>
+          </a>
+          <a class="menu-link menu-link-economia" href="painel.html">
+            <img src="../assets/img/economia.svg" width="24" height="24" alt="">
+            <span>Painel de Economia Acumulada</span>
+          </a>
+        </nav>
+      </div>
+    </dialog>
+  </div>
+</body>
+</html>

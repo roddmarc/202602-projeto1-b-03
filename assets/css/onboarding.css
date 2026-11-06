@@ -1,0 +1,205 @@
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #536679;
+}
+
+.onboarding-cabecalho {
+  flex-shrink: 0;
+  padding: 14px 20px 10px;
+}
+
+.onboarding-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.onboarding-progresso {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.onboarding-progresso progress {
+  appearance: none;
+  flex: 1;
+  min-width: 0;
+  height: 6px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  background: #e0e5e9;
+}
+
+.onboarding-progresso progress::-webkit-progress-bar {
+  background: #e0e5e9;
+  border-radius: 8px;
+}
+
+.onboarding-progresso progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #087cbe, #19bc8b);
+  border-radius: 8px;
+}
+
+.onboarding-progresso progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #087cbe, #19bc8b);
+  border-radius: 8px;
+}
+
+.onboarding-etapas {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 20px 16px;
+  scrollbar-width: thin;
+}
+
+.onboarding-ilustracao {
+  width: 100%;
+  height: 155px;
+  object-fit: contain;
+  background: #f7f9fa;
+}
+
+.onboarding h1 {
+  margin: 10px 0 8px;
+  color: var(--cor-primaria);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.onboarding h1:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+.onboarding p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.onboarding-beneficios {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.onboarding-beneficios li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.onboarding h2 {
+  margin: 0;
+  color: var(--cor-primaria);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.onboarding-beneficios p {
+  font-size: 13px;
+}
+
+.icone-etapa {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 18px;
+  height: 20px;
+  color: var(--cor-primaria);
+  font-size: 23px;
+  line-height: 1;
+}
+
+.icone-rede,
+.icone-economia,
+.icone-adesao,
+.icone-sol,
+.icone-casa,
+.icone-celular,
+.icone-check,
+.icone-relogio,
+.icone-voltar {
+  background: currentColor;
+  -webkit-mask: var(--icone) center / contain no-repeat;
+  mask: var(--icone) center / contain no-repeat;
+}
+
+.icone-rede { --icone: url("../img/consumo.svg"); }
+.icone-economia { --icone: url("../img/economia.svg"); }
+.icone-adesao { --icone: url("../img/faturas.svg"); }
+.icone-sol { --icone: url("../img/sol.svg"); }
+.icone-casa { --icone: url("../img/casa.svg"); }
+.icone-celular { --icone: url("../img/celular.svg"); }
+.icone-check { --icone: url("../img/check-circulo.svg"); }
+.icone-relogio { --icone: url("../img/relogio.svg"); }
+.icone-voltar { --icone: url("../img/seta-voltar.svg"); }
+
+.onboarding-acoes {
+  display: grid;
+  flex-shrink: 0;
+  gap: 6px;
+  padding: 10px 20px 12px;
+  background: #fff;
+  box-shadow: 0 -4px 10px rgb(0 0 0 / 4%);
+}
+
+.onboarding-botao {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid var(--cor-inativa);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.onboarding-avancar {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria);
+  color: #fff;
+}
+
+.onboarding-avancar:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.onboarding-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #fff;
+  color: #536679;
+  font-weight: 500;
+}
+
+.onboarding-voltar .icone-voltar {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.onboarding .cadastro-aviso,
+.onboarding .onboarding-fonte {
+  font-size: 11px;
+}
+
+.cadastro-aviso { text-align: center; }
+.onboarding .onboarding-fonte { margin-top: 16px; }
+.onboarding-fonte a { color: var(--cor-primaria); }
+
+.onboarding [hidden] { display: none; }
