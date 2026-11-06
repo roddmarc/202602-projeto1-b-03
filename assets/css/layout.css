@@ -164,7 +164,7 @@ button:focus-visible {
   overflow-y: auto;
   border-radius: 0 14px 0 0;
   background: var(--cor-superficie);
-  box-shadow: 4px 0 0 rgb(0 0 0 / 12%);
+  box-shadow: 4px 0 0 rgba(53, 49, 49, 0.12);
 }
 
 .menu-cabecalho {
