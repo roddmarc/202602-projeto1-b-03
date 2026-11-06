@@ -103,7 +103,7 @@ img {
 }
 
 .navegacao-item[aria-current="page"] {
-  color: var(--cor-primaria);
+  color: var(--cor-inativa);
 }
 
 .navegacao-item[aria-current="page"]::before {
