@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Central de comunicações</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/central.css">
+  <script src="../assets/js/layout.js" defer></script>
+  <script src="../assets/js/central.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-cabecalho">
+      <!-- Conecte os botões às ações da história que estiver desenvolvendo. -->
+      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-lateral" aria-expanded="false" aria-haspopup="dialog">
+        <img src="../assets/img/menu.svg" width="21" height="17" alt="">
+      </button>
+
+      <img class="app-logo" src="../assets/img/logo.svg" width="100" height="29" alt="Bulbe">
+
+      <div class="cabecalho-acoes">
+        <button class="botao-icone" type="button" aria-label="Notificações">
+          <img src="../assets/img/notificacao.svg" width="40" height="40" alt="">
+        </button>
+        <button class="botao-icone" type="button" aria-label="Meu perfil">
+          <img src="../assets/img/perfil.svg" width="40" height="40" alt="">
+        </button>
+      </div>
+    </header>
+
+    <main class="app-conteudo" id="conteudo" aria-label="Conteúdo da página">
+
+      <section class="central" aria-labelledby="central-titulo">
+        <h1 id="central-titulo">Central de comunicações</h1>
+        <div class="central-abas" role="tablist" aria-label="Seções da central">
+          <button id="aba-avisos" type="button" role="tab" aria-selected="true" aria-controls="painel-avisos">Avisos</button>
+          <button id="aba-contatos" type="button" role="tab" aria-selected="false" aria-controls="painel-contatos" tabindex="-1">Meus contatos</button>
+        </div>
+
+        <section id="painel-avisos" class="central-painel central-avisos" role="tabpanel" aria-labelledby="aba-avisos">
+          <div class="central-filtros" role="group" aria-label="Filtrar comunicados">
+            <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button type="button" data-filtro="nao-lidos" aria-pressed="false">Não lidos</button>
+            <button type="button" data-filtro="lidos" aria-pressed="false">Lidos</button>
+          </div>
+          <ul class="central-lista" id="lista-comunicados" aria-label="Comunicados da Bulbe"></ul>
+          <p id="avisos-vazios" class="central-vazio" role="status" hidden>Nenhum comunicado neste filtro.</p>
+          <section class="central-ajuda" aria-labelledby="titulo-ajuda">
+            <div class="central-ajuda-texto">
+              <img src="../assets/img/precisa_de_ajuda.svg" width="32" height="32" alt="">
+              <div><h2 id="titulo-ajuda">Precisa de ajuda?</h2><p>Fale diretamente com o atendimento Bulbe.</p></div>
+            </div>
+            <button type="button" class="central-botao central-atendimento" data-atendimento>
+              <img src="../assets/img/falar_com_a_bulbe.svg" width="24" height="24" alt="">Falar com Bulbe
+            </button>
+          </section>
+          <p class="central-demonstracao">Comunicados fictícios para demonstração.</p>
+        </section>
+
+        <section id="painel-contatos" class="central-painel central-contatos" role="tabpanel" aria-labelledby="aba-contatos" hidden>
+          <h2>Meus contatos</h2>
+          <p class="central-descricao">Confira os dados usados para entrar em contato com você.</p>
+          <aside class="central-canais">
+            <img src="../assets/img/seus_canais.svg" width="32" height="32" alt="">
+            <div><h3>Seus canais de contato</h3><p>Mantenha telefone e e-mail atualizados para não perder comunicados sobre a contratação e a fatura.</p></div>
+          </aside>
+          <form id="form-contatos" novalidate>
+            <dl class="central-dados">
+              <div class="central-dado">
+                <dt>Nome</dt>
+                <dd><span id="contato-nome">João Silva</span><button type="button" class="central-editar" data-editar="nome" aria-label="Alterar nome"><img src="../assets/img/editar_info.svg" width="24" height="24" alt=""></button></dd>
+                <dd class="central-confirmacao" id="status-nome">Aguardando confirmação</dd>
+              </div>
+              <div class="central-dado">
+                <dt>E-mail</dt>
+                <dd><span id="contato-email">teste.bulbe@bulbe.com.br</span><button type="button" class="central-editar" data-editar="email" aria-label="Alterar e-mail"><img src="../assets/img/editar_info.svg" width="24" height="24" alt=""></button></dd>
+                <dd class="central-confirmacao" id="status-email">Aguardando confirmação</dd>
+              </div>
+              <div class="central-dado">
+                <dt>Telefone</dt>
+                <dd><span id="contato-telefone">+55 (31) 98765-4321</span><button type="button" class="central-editar" data-editar="telefone" aria-label="Alterar telefone"><img src="../assets/img/editar_info.svg" width="24" height="24" alt=""></button></dd>
+                <dd class="central-confirmacao" id="status-telefone">Aguardando confirmação</dd>
+              </div>
+            </dl>
+            <button type="submit" class="central-botao central-validar">Validar e salvar</button>
+            <p id="contatos-retorno" class="central-retorno" role="status" hidden></p>
+          </form>
+          <button type="button" class="central-botao central-atendimento" data-atendimento><img src="../assets/img/falar_com_a_bulbe.svg" width="24" height="24" alt="">Falar com Bulbe</button>
+          <p class="central-demonstracao">Dados fictícios para demonstração.</p>
+        </section>
+        <p id="central-feedback" class="central-sr-only" role="status"></p>
+      </section>
+    </main>
+
+    <nav class="app-navegacao" aria-label="Navegação principal">
+      <!-- Ao implementar as páginas, conecte os destinos e mova aria-current para o item ativo. -->
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/faturas.svg" width="24" height="24" alt="">
+        <span>Faturas</span>
+      </button>
+      <button class="navegacao-item" type="button">
+        <span class="icone-consumo" aria-hidden="true"></span>
+        <span>Consumo</span>
+      </button>
+      <button class="navegacao-item" type="button">
+        <img src="../assets/img/indicacoes.svg" width="24" height="24" alt="">
+        <span>Indicações</span>
+      </button>
+    </nav>
+    <dialog class="central-dialogo" id="dialogo-editar" aria-labelledby="editar-titulo" aria-describedby="editar-descricao">
+      <form id="form-editar" class="central-modal" novalidate>
+        <div class="central-modal-cartao">
+          <button class="central-fechar" type="button" data-fechar aria-label="Cancelar alteração">×</button>
+          <h2 id="editar-titulo">Altere o seu nome</h2>
+          <p id="editar-descricao">Informe o seu nome completo</p>
+          <div class="central-campo">
+            <label for="editar-valor"><span id="editar-rotulo">Nome completo</span> <span class="central-obrigatorio" aria-hidden="true">*</span></label>
+            <input id="editar-valor" name="valor" type="text" required aria-describedby="editar-erro">
+          </div>
+          <p class="central-erro" id="editar-erro" role="alert" hidden></p>
+        </div>
+        <button type="submit" class="central-botao central-modal-salvar">Salvar</button>
+      </form>
+    </dialog>
+    <dialog class="central-dialogo" id="dialogo-comunicado" aria-labelledby="mensagem-titulo">
+      <article class="central-modal">
+        <div class="central-modal-cartao">
+          <button class="central-fechar" type="button" data-fechar aria-label="Fechar comunicado">×</button>
+          <p class="central-mensagem-categoria" id="mensagem-categoria"></p>
+          <h2 id="mensagem-titulo"></h2>
+          <time id="mensagem-data"></time>
+          <p id="mensagem-conteudo" class="central-mensagem-conteudo"></p>
+          <p class="central-demonstracao">Comunicado fictício para demonstração.</p>
+        </div>
+        <button type="button" id="mensagem-marcar" class="central-botao central-modal-salvar">Marcar como lido</button>
+      </article>
+    </dialog>
+    <dialog class="central-dialogo" id="dialogo-atendimento" aria-labelledby="atendimento-titulo">
+      <div class="central-modal">
+        <div class="central-modal-cartao">
+          <button class="central-fechar" type="button" data-fechar aria-label="Fechar atendimento">×</button>
+          <h2 id="atendimento-titulo">Falar com Bulbe</h2>
+          <p>Este é um atendimento demonstrativo. O canal oficial de contato será disponibilizado aqui.</p>
+        </div>
+        <button type="button" class="central-botao central-modal-salvar" data-fechar>Entendi</button>
+      </div>
+    </dialog>
+    <dialog class="menu-lateral" id="menu-lateral" aria-label="Menu de histórias">
+      <div class="menu-painel">
+        <div class="menu-cabecalho">
+          <button class="menu-fechar" type="button" aria-label="Fechar menu" autofocus>
+            <span aria-hidden="true">×</span>
+          </button>
+          <img class="menu-logo" src="../assets/img/logo_menu.svg" alt="Bulbe — sua próxima energia">
+        </div>
+        <nav class="menu-links" aria-label="Histórias do aplicativo">
+          <a class="menu-link" href="onboarding.html">
+            <img src="../assets/img/onboarding.svg" width="24" height="24" alt="">
+            <span>Onboarding Educativo</span>
+          </a>
+          <a class="menu-link" href="simulador.html">
+            <img src="../assets/img/simulador.svg" width="24" height="24" alt="">
+            <span>Simulador de Economia</span>
+          </a>
+          <a class="menu-link" href="central.html" aria-current="page">
+            <img src="../assets/img/comunicacoes.svg" width="24" height="24" alt="">
+            <span>Central de Comunicações</span>
+          </a>
+          <a class="menu-link menu-link-economia" href="painel.html">
+            <img src="../assets/img/economia.svg" width="24" height="24" alt="">
+            <span>Painel de Economia Acumulada</span>
+          </a>
+        </nav>
+      </div>
+    </dialog>
+  </div>
+</body>
+</html>
