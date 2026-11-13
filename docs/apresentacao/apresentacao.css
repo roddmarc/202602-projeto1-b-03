@@ -1,0 +1,104 @@
+:root {
+  color-scheme: dark;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  color: #fff;
+  background: #102e94;
+  --menta: #a7f3d5;
+  --linha: rgb(255 255 255 / 30%);
+  --margem: clamp(22px, 5.1vw, 90px);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: radial-gradient(ellipse at 82% 10%, #1c6d98 0, transparent 55%),
+    linear-gradient(118deg, #101b88, #113fa4 53%, #174d94);
+}
+header, footer {
+  margin-inline: var(--margem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header { padding: 18px 0 12px; border-bottom: 1px solid var(--linha); font-size: 14px; }
+header b { color: var(--menta); padding: 0 8px; }
+main {
+  width: 100%;
+  max-width: 1660px;
+  margin: 0 auto;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+  container-type: size;
+  padding: 22px var(--margem);
+  display: grid;
+  gap: clamp(24px, 5vw, 88px);
+  align-items: center;
+}
+main.com-celular { grid-template-columns: minmax(0, 1fr) minmax(0, 42%); }
+.slide { min-width: 0; max-height: 100%; overflow-y: auto; }
+.com-celular h2 { font-size: clamp(34px, min(4.6vw, 8cqh), 78px); }
+.com-celular .legenda { margin-bottom: 10px; }
+.com-celular .persona, .com-celular .demonstracao { margin-top: 14px; }
+.evidencia { margin: 12px 0 0; font-size: clamp(16px, 1.35vw, 22px); line-height: 1.4; }
+.evidencia strong { color: var(--menta); }
+.abertura { display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: 6%; overflow: visible; }
+.abertura .arte { width: min(88%, 85cqh); justify-self: center; margin: 0; }
+.arte { position: relative; margin: 0 6%; }
+.arte::before {
+  content: ""; position: absolute; inset: 5% -3% -2% 5%;
+  background: #22c899; transform: rotate(5deg); border-radius: 12%;
+}
+.arte img { position: relative; display: block; width: 100%; border-radius: 12%; }
+h1, h2, h3, p { margin: 0; }
+h1, h2 { font-size: clamp(44px, 5.4vw, 90px); line-height: 1.04; letter-spacing: -.05em; font-weight: 650; text-wrap: balance; }
+h1 em, h2 em { font-weight: 350; font-style: normal; color: var(--menta); }
+.legenda, .demonstracao b {
+  display: block; color: var(--menta); font-weight: 650; text-transform: uppercase;
+  letter-spacing: .12em; font-size: clamp(12px, 1vw, 16px);
+}
+.legenda { margin-bottom: 18px; }
+.subtitulo, .persona { font-size: clamp(17px, 1.6vw, 25px); font-weight: 600; margin-top: 24px; }
+.autores, .resumo, .demonstracao { font-size: clamp(16px, 1.45vw, 24px); line-height: 1.48; }
+.autores { margin-top: 18px; }
+.resumo { margin-top: 14px; max-width: 60ch; }
+.demonstracao { border-left: 3px solid #4ed39f; padding-left: 16px; margin-top: 24px; max-width: 57ch; }
+.demonstracao b { margin-bottom: 5px; }
+.indicadores, .historias { display: grid; gap: 24px 36px; margin-top: 30px; }
+.indicadores { grid-template-columns: repeat(4, 1fr); }
+.historias { grid-template-columns: 1fr 1fr; }
+article { border-top: 1px solid var(--linha); padding-top: 12px; }
+article strong { font-size: clamp(38px, 4.2vw, 76px); font-weight: 550; color: var(--menta); letter-spacing: -.05em; }
+article h3 { font-size: clamp(17px, 1.5vw, 24px); margin-bottom: 7px; }
+article p { font-size: clamp(15px, 1.25vw, 20px); line-height: 1.48; }
+.fonte { color: #d2e4f7; font-size: 14px; margin-top: 26px; }
+#celular {
+  position: relative; justify-self: center;
+  width: min(calc(100% - 8px), calc(56.22cqh - 5px), 525px);
+  aspect-ratio: 375 / 667; box-sizing: content-box; overflow: hidden;
+  border: 2px solid #ecf7ff; border-radius: 18px; background: white;
+  box-shadow: 0 16px 45px #081b595e, 0 0 0 5px #dceeff1f;
+}
+iframe { position: absolute; inset: 0; border: 0; width: 375px; height: 667px; transform-origin: top left; }
+footer { padding: 10px 0 14px; border-top: 1px solid var(--linha); }
+.progresso, nav { display: flex; align-items: center; gap: 12px; }
+#contador { font-variant-numeric: tabular-nums; font-weight: 600; }
+progress { width: clamp(60px, 12vw, 170px); height: 4px; border: 0; background: #ffffff42; }
+progress::-webkit-progress-bar { background: #ffffff42; }
+progress::-webkit-progress-value { background: var(--menta); }
+progress::-moz-progress-bar { background: var(--menta); }
+button { width: 46px; height: 36px; border: 1px solid #ffffff85; border-radius: 18px; background: transparent; color: white; font-size: 22px; cursor: pointer; }
+button:hover:enabled, button:focus-visible { background: white; color: #123598; }
+button:disabled { opacity: .35; cursor: default; }
+@media (max-width: 760px) {
+  .indicadores { grid-template-columns: repeat(2, 1fr); }
+  .abertura { grid-template-columns: 1fr; }
+  .arte { display: none; }
+  main.com-celular { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) minmax(0, 1.2fr); gap: 12px; }
+  #celular { width: min(100%, calc(30cqh - 8px), 330px); }
+  .historias { grid-template-columns: 1fr; }
+  h1, h2 { font-size: clamp(38px, 8vw, 58px); }
+}
