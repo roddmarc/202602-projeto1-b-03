@@ -1,3 +1,8 @@
+.app-onboarding {
+  padding-top: 24px;
+  background: linear-gradient(100deg, #0865be, var(--cor-primaria));
+}
+
 .onboarding {
   display: flex;
   flex-direction: column;
@@ -172,11 +177,6 @@
   color: #fff;
 }
 
-.onboarding-avancar:disabled {
-  opacity: .55;
-  cursor: not-allowed;
-}
-
 .onboarding-voltar {
   display: flex;
   align-items: center;
@@ -193,12 +193,10 @@
   flex-shrink: 0;
 }
 
-.onboarding .cadastro-aviso,
 .onboarding .onboarding-fonte {
   font-size: 11px;
 }
 
-.cadastro-aviso { text-align: center; }
 .onboarding .onboarding-fonte { margin-top: 16px; }
 .onboarding-fonte a { color: var(--cor-primaria); }
 

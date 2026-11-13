@@ -46,10 +46,4 @@
     erro.hidden = true;
     document.querySelector('.simulador-resultado').scrollIntoView({ block: 'nearest' });
   });
-
-  document.querySelector('#quero-economizar').addEventListener('click', (evento) => {
-    evento.preventDefault();
-    campo.focus();
-    campo.scrollIntoView({ block: 'center' });
-  });
 })();
