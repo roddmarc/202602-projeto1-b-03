@@ -1,134 +1,149 @@
-# Onboarding Educativo com Simulador de Economia
+# Projeto Bulbe · Onboarding Educativo com Simulador de Economia
 
-> Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026  
-> Cliente: **Bulbe Energia** · Turma **B** · Squad **03**
+**Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026**  
+**Cliente:** Bulbe Energia · **Turma:** B · **Squad:** 03  
+**Professor:** Prof. Cristiano de Macedo Neto, M.Sc  
 
-Protótipo para celular que acompanha o cliente da Bulbe desde o primeiro contato com a energia por assinatura até a consulta da economia acumulada. O projeto reúne quatro telas: **Onboarding Educativo**, **Central de Comunicações**, **Simulador de Economia** e **Painel de Economia Acumulada**.
+Protótipo web para celular que acompanha a jornada do cliente da Bulbe Energia. Antes do cadastro, o usuário pode entender como funciona a energia por assinatura e estimar quanto poderia economizar. Após a adesão, pode consultar avisos, confirmar seus dados de contato e acompanhar a economia acumulada.
 
----
+**[Ponto de entrada do protótipo](pages/login.html) · [Apresentação final interativa](docs/apresentacao/index.html) · [Quadro do Squad 03](https://github.com/users/roddmarc/projects/2/)**
 
-## 1. Problema
+## 1. Como executar
 
-Quem chega ao aplicativo da Bulbe pode ter dúvidas antes mesmo do cadastro: precisa instalar placas solares? Pode contratar morando de aluguel? Depois da adesão, surgem outras perguntas: qual conta pagar, quando começam os descontos e quanto o serviço já economizou?
-
-- **Dor escolhida:** dificuldade de compreender a energia por assinatura e acompanhar seus benefícios antes do cadastro, durante a ativação e após o início dos descontos.
-- **Evidência:** segundo os dados da Bulbe apresentados na Sprint I, apenas **27,1% dos 32.478 usuários** analisados avançaram da primeira tela do aplicativo. Após a contratação, cerca de **20% das mensagens por WhatsApp** falharam na entrega, e houve clientes que ficaram até **20 dias sem comunicação**. A inadimplência da primeira fatura chegou a **32,4%** entre setembro de 2025 e julho de 2026. A falta de entendimento do produto também foi apontada como motivo de **27,7% dos cancelamentos** desde 2022.
-- **Indicador que a solução pretende mover:** a taxa de conclusão do cadastro, acompanhando o avanço da primeira tela como indicador intermediário. Nas etapas seguintes, a central busca melhorar a entregabilidade das comunicações, o simulador busca favorecer o pagamento da primeira fatura e o painel busca reduzir o cancelamento nos primeiros meses.
-
-*Fonte dos indicadores: apresentação institucional Bulbe & Ibmec, setembro de 2026, e materiais da Etapa 2 da disciplina. Os percentuais descrevem o cenário que motivou o projeto.*
-
-## 2. Persona e jornada
-
-O squad definiu quatro personas fictícias, uma para cada momento da jornada.
-
-| Persona | Contexto e necessidade |
-| --- | --- |
-| **Mariana Costa, 27 anos** | Analista administrativa em Belo Horizonte, mora de aluguel. Antes de fornecer seus dados, quer entender como a energia por assinatura funciona e se precisará fazer obras no imóvel. |
-| **Ricardo Almeida, 43 anos** | Administra uma loja e nem sempre consegue acompanhar o WhatsApp. Após contratar, precisa de um lugar para consultar os avisos sobre a ativação e a primeira fatura. |
-| **Fernanda Oliveira, 35 anos** | Professora em Betim, continua recebendo a conta da distribuidora enquanto aguarda a ativação. Quer saber quando os descontos começam e quanto poderá economizar. |
-| **Carlos Mendes, 56 anos** | Técnico aposentado em Santa Luzia, compara as despesas da casa mês a mês. Quer consultar o histórico e o total economizado para decidir se vale a pena continuar com o serviço. |
-
-**Mapa de jornada:** [consultar as personas e o mapa completo](docs/jornada.md).
-
-## 3. Solução
-
-As quatro telas do MVP compartilham um menu lateral. Cada tela responde a uma pergunta do cliente e está vinculada à história de usuário que orientou sua implementação.
-
-| Tela | O que faz | História relacionada |
-| --- | --- | --- |
-| [Onboarding Educativo](pages/onboarding.html) | Apresenta, em três etapas, a geração de créditos de energia, a possibilidade de economizar sem instalar placas solares e os requisitos para contratar. | [HU01 · Issue #5](https://github.com/roddmarc/202602-projeto1-b-03/issues/5) |
-| [Central de Comunicações](pages/central.html) | Reúne avisos sobre contratação e fatura. Permite abrir comunicados, filtrar por status de leitura e conferir, editar e confirmar nome, e-mail e telefone. | [HU02 · Issue #6](https://github.com/roddmarc/202602-projeto1-b-03/issues/6) |
-| [Simulador de Economia](pages/simulador.html) | Recebe o valor médio mensal da conta de luz e estima a economia mensal e anual. Explica a parcela sem desconto e mostra as etapas até a ativação. | [HU03 · Issue #7](https://github.com/roddmarc/202602-projeto1-b-03/issues/7) |
-| [Painel de Economia Acumulada](pages/painel.html) | Mostra a economia desde a adesão, um gráfico com filtros de três e seis meses e uma tabela com o histórico mensal. Permite comparar dois meses em reais e em percentual. | [HU04 · Issue #8](https://github.com/roddmarc/202602-projeto1-b-03/issues/8) |
-
-O **simulador** responde “quanto posso economizar?”. Na regra ilustrativa do projeto, para uma conta de **R$ 250,00**, o desconto de 15% incide sobre os R$ 200,00 que excedem o custo estimado de R$ 50,00 da distribuidora. O resultado é uma estimativa de **R$ 30,00 por mês** e **R$ 360,00 por ano**.
-
-O **painel** responde “quanto economizei ao longo do tempo?”. Ele usa um histórico fictício de julho de 2025 a junho de 2026, com **R$ 1.260,72** de economia acumulada em 12 meses.
-
-No protótipo, o cadastro ao final do onboarding está indicado como indisponível. O atendimento da central e o status de ativação do simulador são demonstrativos.
-
-- **Histórias de usuário:** [descrições e critérios de aceite](docs/historias.md).
-- **Wireframes:** [desenhos das telas do MVP](docs/wireframes/).
-
-## 4. Tecnologias
-
-- **HTML, CSS e JavaScript puro (Vanilla):** estrutura das páginas, layout para celular, navegação, validação dos contatos, cálculo das estimativas e interação com o gráfico.
-- **JSON e `fetch`:** a página de exemplo [`index.html`](index.html) carrega clientes fictícios de [`data/clientes.json`](data/clientes.json). Na versão atual das histórias, os avisos da central e o histórico mensal do painel estão definidos nos respectivos arquivos JavaScript.
-- **`localStorage`:** a central mantém, no navegador utilizado, os avisos marcados como lidos e os dados de contato confirmados.
-- **Git e GitHub:** histórias e critérios de aceite em Issues, planejamento no GitHub Projects e integração das funcionalidades na `main` por Pull Requests.
-
-## 5. Como executar
-
-1. Clone o repositório e entre na pasta do projeto:
+1. Clone o repositório:
 
    ```bash
    git clone https://github.com/roddmarc/202602-projeto1-b-03.git
    cd 202602-projeto1-b-03
    ```
 
-2. Abra a pasta no **Visual Studio Code**.
-3. Instale ou habilite a extensão **Live Server**.
-4. Clique com o botão direito em [`pages/layout.html`](pages/layout.html) e selecione **Open with Live Server**.
-5. No navegador, abra o **menu lateral** e escolha uma das quatro histórias. Para reproduzir as dimensões do protótipo, visualize a aplicação em **375 × 667 pixels**.
+2. Abra a **pasta inteira do repositório** no Visual Studio Code e habilite a extensão **Live Server**.
+3. Escolha o arquivo que deseja executar, clique nele com o botão direito e selecione **Open with Live Server**.
 
-Para testar o exemplo de leitura de arquivos JSON, abra [`index.html`](index.html) pelo Live Server.
+| Para abrir | Arquivo | Visualização |
+| --- | --- | --- |
+| Aplicativo desde o login | [`pages/login.html`](pages/login.html) | Tela de referência de **375 × 667 px**. |
+| Apresentação final | [`docs/apresentacao/index.html`](docs/apresentacao/index.html) | Janela ampla para visualizar o slide e interagir com o aplicativo à direita. |
 
-## 6. Estrutura do repositório
+O projeto usa HTML, CSS e JavaScript puro e pode ser executado diretamente pelo Live Server. O [`index.html` da raiz](index.html) é o exemplo da disciplina que demonstra a leitura de um arquivo JSON.
+
+## 2. Problema e evidências
+
+Quem chega ao aplicativo pode precisar decidir se vale a pena iniciar um cadastro antes de entender se a assinatura exige obras ou quanto pode economizar. Depois da contratação, a espera pela ativação, os avisos perdidos e a dificuldade para interpretar a primeira cobrança podem comprometer a confiança no serviço.
+
+O MVP foi construído com foco em dois resultados: **reduzir o cancelamento no primeiro mês** e **reduzir a proporção de primeiras faturas não pagas**. Quatro indicadores apresentados na Sprint I orientaram a escolha das histórias.
+
+| Momento da jornada | Evidência apresentada pela Bulbe | Decisão de produto |
+| --- | --- | --- |
+| Primeiro acesso | Apenas **27,1% dos 32.478 usuários** analisados avançaram além da primeira tela. | Disponibilizar a explicação do serviço e a simulação de economia antes do cadastro. |
+| Comunicação após a adesão | Cerca de **20% das mensagens por WhatsApp** falharam na entrega. Houve clientes que ficaram até **20 dias sem comunicação**. | Reunir os avisos no aplicativo e permitir a atualização dos contatos. |
+| Primeira cobrança | A inadimplência da primeira fatura chegou a **32,4%** entre setembro de 2025 e julho de 2026. | Explicar quando os descontos começam e facilitar a consulta aos avisos e aos valores economizados. |
+| Permanência no serviço | A falta de entendimento do produto foi apontada como motivo de **27,7% dos cancelamentos** desde 2022. | Explicar o funcionamento da assinatura e mostrar a economia ao longo do tempo. |
+
+**Fonte:** apresentação institucional Bulbe & Ibmec, setembro de 2026, e materiais da Etapa 2 da disciplina. Esses indicadores descrevem o cenário que motivou o projeto. Para medir o impacto do MVP, a equipe propõe comparar o cancelamento no primeiro mês e o pagamento da primeira fatura entre clientes que utilizam o novo fluxo e clientes que utilizam o fluxo atual.
+
+## 3. Personas e histórias de usuário
+
+O squad definiu quatro personas fictícias a partir dos momentos de decisão registrados no mapa de jornada. Cada história corresponde a uma tela funcional.
+
+| História | Persona e pergunta que orientou a tela | O que o usuário consegue fazer |
+| --- | --- | --- |
+| [HU01 · Onboarding Educativo](https://github.com/roddmarc/202602-projeto1-b-03/issues/5) | **Mariana Costa, 27 anos**, analista administrativa em Belo Horizonte, mora de aluguel. *Preciso instalar placas solares ou fazer obras?* | Percorrer três etapas sobre a origem dos créditos, a economia sem instalação de placas e os requisitos de contratação. |
+| [HU02 · Central de Comunicações](https://github.com/roddmarc/202602-projeto1-b-03/issues/6) | **Ricardo Almeida, 43 anos**, administra uma loja e nem sempre acompanha o WhatsApp. *Onde encontro um aviso que perdi?* | Abrir comunicados, filtrar por status de leitura, marcar avisos como lidos e editar ou confirmar nome, e-mail e telefone. |
+| [HU03 · Simulador de Economia](https://github.com/roddmarc/202602-projeto1-b-03/issues/7) | **Fernanda Oliveira, 35 anos**, professora em Betim, continua recebendo a conta da distribuidora enquanto aguarda a ativação. *Quanto posso economizar e quando começa o desconto?* | Informar o valor médio da conta, consultar a estimativa mensal e anual e entender a relação entre ativação e início da economia. |
+| [HU04 · Painel de Economia Acumulada](https://github.com/roddmarc/202602-projeto1-b-03/issues/8) | **Carlos Mendes, 56 anos**, técnico aposentado em Santa Luzia, compara as despesas da casa. *Quanto já economizei desde a adesão?* | Consultar o total acumulado, filtrar o gráfico por período, abrir o histórico mensal e comparar dois meses em reais e em percentual. |
+
+[Mapa de jornada e personas](docs/jornada.md) · [Histórias e critérios de aceite](docs/historias.md) · [Wireframes](docs/wireframes/)
+
+## 4. Como navegar pelo protótipo
+
+### Antes do login
+
+A [tela de login](pages/login.html) oferece três caminhos:
+
+- **Entenda como você economiza** abre o [Onboarding Educativo](pages/onboarding.html). Na primeira etapa, **Voltar** retorna ao login. Nas etapas seguintes, retorna uma etapa. Ao final, **Quero economizar!** também leva ao login.
+- **Simulador de Economia** abre o [simulador](pages/simulador.html) com as estimativas em **R$ 0,00**. O usuário pode simular uma conta antes do cadastro. **Voltar** e **Quero economizar** retornam ao login.
+- **Entrar** e **Primeiro acesso** abrem a [área de faturas](pages/layout.html). Ambos os acessos são simulados e dispensam credenciais.
+
+### Na área do cliente
+
+A tela de faturas apresenta a instalação, o vencimento, o desconto Bulbe, o valor a pagar e o histórico mensal. Ela serve como base de navegação da área logada. Os controles de PIX, detalhes da fatura e histórico completo são ilustrativos.
+
+Pelo **menu lateral**, o usuário pode acessar as quatro histórias, incluindo a [Central de Comunicações](pages/central.html) e o [Painel de Economia Acumulada](pages/painel.html).
+
+## 5. Como conferir as funcionalidades
+
+| Tela | Ação de teste | Resultado esperado |
+| --- | --- | --- |
+| Onboarding | Avançar de **Conheça a Bulbe** até a terceira etapa. Usar **Voltar**, avançar novamente e selecionar **Quero economizar!**. | O indicador acompanha a etapa exibida e a ação final retorna ao login. |
+| Central | Abrir um comunicado, marcá-lo como lido e aplicar o filtro de leitura. Em **Meus contatos**, tentar salvar um e-mail inválido e depois corrigi-lo. | O status do aviso é atualizado. O formulário sinaliza o erro e permite confirmar os dados após a correção. |
+| Simulador | Tentar simular com o campo vazio. Depois, informar **R$ 250,00** e selecionar **Simular minha economia**. | O campo vazio gera uma mensagem de validação. Para R$ 250,00, a economia estimada é de **R$ 30,00 por mês** e **R$ 360,00 por ano**. |
+| Painel | Alternar entre três e seis meses, abrir **Ver detalhes de economia** e comparar maio e junho de 2026. | O gráfico acompanha o período. O histórico apresenta **R$ 1.260,72** acumulados em 12 meses, e junho mostra **R$ 7,60 a mais** que maio. |
+
+O simulador aplica uma **regra ilustrativa** de 15% sobre a parcela da conta que excede R$ 50,00. Para uma conta de R$ 250,00, a parcela considerada é de R$ 200,00. O painel usa uma série fictícia de julho de 2025 a junho de 2026 para demonstrar a consulta à economia já acumulada.
+
+## 6. Apresentação final interativa
+
+A [apresentação em HTML](docs/apresentacao/index.html) possui **10 slides numerados** e foi organizada para uma demonstração de até **8 minutos**. As páginas reais do aplicativo são carregadas em um `iframe` que preserva a proporção de **375 × 667 px**.
+
+| Slides | Conteúdo |
+| --- | --- |
+| **01–03** | Capa, evidências do problema e texto das quatro histórias de usuário. |
+| **04–06** | Login, Onboarding Educativo e Simulador de Economia. |
+| **07–09** | Área de faturas, Central de Comunicações e Painel de Economia Acumulada. |
+| **10** | Encerramento e proposta de avaliação do impacto. |
+
+As setas percorrem o roteiro em sequência. Também é possível navegar pelo próprio aplicativo: ao abrir o simulador pelo login, por exemplo, a apresentação passa do slide **04/10** para o **06/10**. Ao digitar um valor, filtrar avisos ou avançar uma etapa do onboarding, o slide permanece na história em demonstração.
+
+## 7. Tecnologias e organização do código
+
+- **HTML e CSS:** páginas semânticas, estilos compartilhados e estilos específicos de cada tela.
+- **JavaScript puro:** navegação, validação dos formulários, cálculo das estimativas, filtros, comparação de meses e sincronização da apresentação.
+- **`localStorage`:** persistência local dos avisos lidos e dos dados de contato na Central de Comunicações.
+- **JSON e `fetch`:** a página de exemplo da disciplina carrega os clientes fictícios de [`data/clientes.json`](data/clientes.json). Os comunicados da central e a série mensal do painel estão definidos nos respectivos scripts.
+- **Git e GitHub:** planejamento no [GitHub Projects](https://github.com/users/roddmarc/projects/2/), critérios de aceite em Issues e revisão das implementações por Pull Requests.
 
 ```text
 202602-projeto1-b-03/
-├── README.md                  # Apresentação e instruções do projeto
-├── index.html                 # Exemplo de leitura de clientes fictícios
+├── README.md
+├── index.html                 # Exemplo de leitura de JSON da disciplina
 ├── pages/
-│   ├── layout.html            # Layout compartilhado e entrada para a demonstração
-│   ├── onboarding.html        # HU01 — Onboarding educativo
-│   ├── central.html           # HU02 — Central de comunicações
-│   ├── simulador.html         # HU03 — Simulador de economia
-│   ├── painel.html            # HU04 — Painel de economia acumulada
-│   └── exemplo.html           # Página da estrutura-base da disciplina
+│   ├── login.html             # Entrada do protótipo
+│   ├── layout.html            # Área de faturas e menu lateral
+│   ├── onboarding.html        # HU01 · Onboarding Educativo
+│   ├── central.html           # HU02 · Central de Comunicações
+│   ├── simulador.html         # HU03 · Simulador de Economia
+│   ├── painel.html            # HU04 · Painel de Economia Acumulada
+│   └── exemplo.html           # Página de exemplo da disciplina
 ├── assets/
-│   ├── css/                   # Estilos do layout e de cada tela
-│   ├── js/                    # Navegação, leitura de dados e lógica das histórias
+│   ├── css/                   # Estilos compartilhados e de cada tela
+│   ├── js/                    # Navegação e lógica das funcionalidades
 │   └── img/                   # Logotipos, ícones e ilustrações
-├── data/
-│   ├── clientes.json          # Clientes fictícios
-│   └── faturas.json           # Faturas fictícias
+├── data/                      # Arquivos JSON com dados fictícios
 ├── docs/
-│   ├── jornada.md             # Personas e mapa de jornada
+│   ├── apresentacao/          # Apresentação final em HTML, CSS e JavaScript
 │   ├── historias.md           # Histórias de usuário e critérios de aceite
-│   ├── wireframes/            # Representações visuais da jornada e das telas
-│   └── sprints/               # Documentação das Sprint Reviews
+│   ├── jornada.md             # Personas e mapa de jornada
+│   ├── wireframes/            # Protótipos visuais
+│   └── sprints/               # Orientações para os registros das reviews
 └── .github/                   # Modelos de Issues e Pull Requests
 ```
 
-## 7. Quadro do projeto
-
-**GitHub Projects:** [abrir o quadro do Squad 03](https://github.com/users/roddmarc/projects/2/).
-
-O quadro organiza o trabalho do squad. As Issues registram o que cada história precisa atender, e os Pull Requests mostram a implementação integrada à `main`.
-
 ## 8. Equipe
 
-| Integrante | GitHub | Papel principal |
+| Integrante | GitHub | Histórias sob sua responsabilidade |
 | --- | --- | --- |
-| Arthur Marcelino de Oliveira | [@artmol](https://github.com/artmol) | Implementação da **HU02 — Central de Comunicações** e da **HU03 — Simulador de Economia**. |
-| Rodrigo Marcelino de Oliveira | [@roddmarc](https://github.com/roddmarc) | Implementação da **HU01 — Onboarding Educativo**. |
-| Gustavo Salles Pires | [@Gustavo-Salles](https://github.com/Gustavo-Salles) | Implementação da **HU04 — Painel de Economia Acumulada**. |
+| Arthur Marcelino de Oliveira | [@artmol](https://github.com/artmol) | HU02 · Central de Comunicações e HU03 · Simulador de Economia |
+| Rodrigo Marcelino de Oliveira | [@roddmarc](https://github.com/roddmarc) | HU01 · Onboarding Educativo |
+| Gustavo Salles Pires | [@Gustavo-Salles](https://github.com/Gustavo-Salles) | HU04 · Painel de Economia Acumulada |
 
 ## 9. Entregas
 
-*Situação em 05/11/2026, antes da Sprint Review II da Turma B.*
+| Entrega | Resultado |
+| --- | --- |
+| Sprint I | Problema e indicadores definidos, quatro personas, mapa de jornada, histórias com critérios de aceite e wireframes. |
+| Implementação das histórias | Quatro funcionalidades implementadas: [Onboarding](https://github.com/roddmarc/202602-projeto1-b-03/pull/11), [Central](https://github.com/roddmarc/202602-projeto1-b-03/pull/9), [Simulador](https://github.com/roddmarc/202602-projeto1-b-03/pull/10) e [Painel](https://github.com/roddmarc/202602-projeto1-b-03/pull/12). |
+| Fluxo final do aplicativo | [Tela de login](https://github.com/roddmarc/202602-projeto1-b-03/pull/13), [acesso ao onboarding e ao simulador antes do cadastro](https://github.com/roddmarc/202602-projeto1-b-03/pull/14) e [área inicial de faturas](https://github.com/roddmarc/202602-projeto1-b-03/pull/15). |
+| Apresentação final | [Demonstração interativa](docs/apresentacao/index.html) com os indicadores da Sprint I, as quatro histórias e o MVP em funcionamento. |
 
-| Marco | Aula | Status |
-| --- | --- | --- |
-| Mapa de jornada | 19 | Elaborado com quatro personas e seus momentos de decisão. [Consultar a jornada](docs/jornada.md). |
-| Histórias de usuário | 20 | Quatro histórias documentadas com critérios de aceite e registradas nas Issues #5 a #8. [Consultar as histórias](docs/historias.md). |
-| Wireframes | 21–23 | Telas das quatro histórias desenhadas para celular. [Consultar os wireframes](docs/wireframes/). |
-| Sprint Review I | 24 | Apresentados o problema, as personas, as quatro histórias, os wireframes e o planejamento da Sprint II. |
-| Implementação | 25–28 | Quatro telas integradas à `main`: [HU01](https://github.com/roddmarc/202602-projeto1-b-03/pull/11), [HU02](https://github.com/roddmarc/202602-projeto1-b-03/pull/9), [HU03](https://github.com/roddmarc/202602-projeto1-b-03/pull/10) e [HU04](https://github.com/roddmarc/202602-projeto1-b-03/pull/12). |
-| Sprint Review II | 29 | Prevista para **06/11/2026**, com demonstração do MVP e registro do feedback recebido. |
-| Versão final | 30 | Pendente dos ajustes definidos na Sprint Review II. Prazo da Turma B para congelamento da versão na `main`: **12/11/2026**. |
-
----
-
-> Os dados de clientes, contatos, faturas e economia exibidos no protótipo são fictícios. Os indicadores usados para justificar o problema são dados agregados apresentados pela Bulbe Energia à disciplina.
+> Projeto acadêmico desenvolvido para a disciplina Projeto em Ciência de Dados I. As personas, os contatos, as faturas e os valores de economia exibidos no protótipo são fictícios. Os indicadores que fundamentam o problema são dados agregados apresentados pela Bulbe Energia à disciplina.
