@@ -9,32 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/simulador.css">
-  <script src="../assets/js/layout.js" defer></script>
   <script src="../assets/js/simulador.js" defer></script>
 </head>
 <body>
-  <div class="app">
-    <header class="app-cabecalho">
-      <!-- Conecte os botões às ações da história que estiver desenvolvendo. -->
-      <button class="botao-icone botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-lateral" aria-expanded="false" aria-haspopup="dialog">
-        <img src="../assets/img/menu.svg" width="21" height="17" alt="">
-      </button>
-
-      <img class="app-logo" src="../assets/img/logo.svg" width="100" height="29" alt="Bulbe">
-
-      <div class="cabecalho-acoes">
-        <button class="botao-icone" type="button" aria-label="Notificações">
-          <img src="../assets/img/notificacao.svg" width="40" height="40" alt="">
-        </button>
-        <button class="botao-icone" type="button" aria-label="Meu perfil">
-          <img src="../assets/img/perfil.svg" width="40" height="40" alt="">
-        </button>
-      </div>
-    </header>
-
+  <div class="app app-simulador">
     <main class="app-conteudo" id="conteudo" aria-label="Conteúdo da página">
 
       <section class="simulador" aria-labelledby="titulo-simulador">
+        <img class="simulador-logo" src="../assets/img/logo_menu.svg" width="122" height="41" alt="Bulbe">
         <h1 id="titulo-simulador">Simulação de economia</h1>
         <p class="simulador-introducao">Veja uma estimativa de quanto você pode economizar com a Bulbe.</p>
         <form id="formulario-simulador" novalidate>
@@ -71,54 +53,10 @@
             </li>
           </ol>
         </section>
-        <a class="simulador-botao simulador-voltar" href="layout.html">Voltar</a>
-        <p class="simulador-convite">Não é um cliente Bulbe?<br><a href="#valor-conta" id="quero-economizar">Quero economizar</a></p>
+        <a class="simulador-botao simulador-voltar" href="login.html">Voltar</a>
+        <p class="simulador-convite">Não é um cliente Bulbe?<br><a href="login.html">Quero economizar</a></p>
       </section>
     </main>
-
-    <nav class="app-navegacao" aria-label="Navegação principal">
-      <!-- Ao implementar as páginas, conecte os destinos e mova aria-current para o item ativo. -->
-      <button class="navegacao-item" type="button">
-        <img src="../assets/img/faturas.svg" width="24" height="24" alt="">
-        <span>Faturas</span>
-      </button>
-      <button class="navegacao-item" type="button">
-        <span class="icone-consumo" aria-hidden="true"></span>
-        <span>Consumo</span>
-      </button>
-      <button class="navegacao-item" type="button">
-        <img src="../assets/img/indicacoes.svg" width="24" height="24" alt="">
-        <span>Indicações</span>
-      </button>
-    </nav>
-    <dialog class="menu-lateral" id="menu-lateral" aria-label="Menu de histórias">
-      <div class="menu-painel">
-        <div class="menu-cabecalho">
-          <button class="menu-fechar" type="button" aria-label="Fechar menu" autofocus>
-            <span aria-hidden="true">×</span>
-          </button>
-          <img class="menu-logo" src="../assets/img/logo_menu.svg" alt="Bulbe — sua próxima energia">
-        </div>
-        <nav class="menu-links" aria-label="Histórias do aplicativo">
-          <a class="menu-link" href="onboarding.html">
-            <img src="../assets/img/onboarding.svg" width="24" height="24" alt="">
-            <span>Onboarding Educativo</span>
-          </a>
-          <a class="menu-link" href="simulador.html" aria-current="page">
-            <img src="../assets/img/simulador.svg" width="24" height="24" alt="">
-            <span>Simulador de Economia</span>
-          </a>
-          <a class="menu-link" href="central.html">
-            <img src="../assets/img/comunicacoes.svg" width="24" height="24" alt="">
-            <span>Central de Comunicações</span>
-          </a>
-          <a class="menu-link menu-link-economia" href="painel.html">
-            <img src="../assets/img/economia.svg" width="24" height="24" alt="">
-            <span>Painel de Economia Acumulada</span>
-          </a>
-        </nav>
-      </div>
-    </dialog>
   </div>
 </body>
 </html>

@@ -1,3 +1,8 @@
+.app-simulador {
+  padding-top: 24px;
+  background: linear-gradient(100deg, #0865be, var(--cor-primaria));
+}
+
 .simulador {
   padding: 18px 20px 24px;
   color: #455767;
@@ -41,4 +46,3 @@
 .simulador-voltar { margin-top: 28px; }
 .simulador .simulador-convite { margin-top: 10px; text-align: center; }
 .simulador-convite a { display: inline-block; margin-top: 5px; color: var(--cor-primaria); font-weight: 500; text-underline-offset: 2px; }
-.menu-link[aria-current="page"] { background: #f3f4f8; color: var(--cor-primaria); }
