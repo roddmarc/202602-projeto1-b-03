@@ -237,3 +237,132 @@ button:focus-visible {
   outline: 2px solid var(--cor-primaria);
   outline-offset: -3px;
 }
+
+.fatura-instalacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 16px 13px 25px;
+  color: white;
+}
+
+.fatura-instalacao select {
+  min-width: 0;
+  width: 190px;
+  padding: 7px 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: linear-gradient(var(--cor-primaria), var(--cor-primaria)) padding-box,
+    linear-gradient(110deg, #0873bf, #19bc8b) border-box;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.fatura-instalacao option { background: var(--cor-primaria); }
+
+.faturas {
+  padding: 16px 20px;
+  color: #536779;
+  font-size: 14px;
+}
+
+.faturas h1, .faturas h2 {
+  margin: 0 0 12px 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fatura-cartao {
+  padding: 12px;
+  border: 4px solid #e6f1fd;
+  border-radius: 9px;
+  color: #404f5e;
+}
+
+.fatura-cartao p { margin: 0; }
+.fatura-resumo, .fatura-acoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fatura-resumo h2 { margin: 0; font-weight: 600; }
+.fatura-status {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #e6f1fd;
+  color: #07539a;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.fatura-vencimento, .fatura-desconto { font-size: 12px; }
+.fatura-cartao .fatura-original { margin: 10px 0 2px; }
+.fatura-original del { font-size: 16px; font-weight: 700; }
+.fatura-valor, .fatura-desconto { color: var(--cor-primaria); }
+.fatura-valor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.fatura-valor small { font-size: 16px; }
+.fatura-acoes { margin-top: 10px; }
+.fatura-acoes button, .fatura-historico-completo {
+  min-height: 44px;
+  padding: 8px 15px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--cor-primaria);
+  color: white;
+  font-weight: 600;
+}
+
+.fatura-acoes button { display: inline-flex; align-items: center; gap: 6px; }
+.fatura-acoes .fatura-detalhes {
+  padding-inline: 2px;
+  background: transparent;
+  color: var(--cor-primaria);
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.fatura-indicadores { display: flex; justify-content: center; gap: 12px; margin: 10px 0 18px; }
+.fatura-indicadores i { width: 8px; height: 8px; border-radius: 50%; background: #d1d6de; }
+.fatura-indicadores i:first-child { background: var(--cor-primaria); }
+.fatura-historico { margin: 0; padding: 0; list-style: none; }
+.fatura-historico li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 65px;
+  border-bottom: 1px solid #ccd5de;
+  font-size: 16px;
+}
+
+.fatura-historico strong { color: #404f5e; white-space: nowrap; }
+.fatura-status.paga { background: #e8faf1; color: #188354; }
+.fatura-historico-completo {
+  width: 100%;
+  margin-top: 16px;
+  border: 1px solid #ccd5de;
+  background: white;
+  color: inherit;
+}
+
+.faturas + .app-navegacao [aria-current="page"] { color: var(--cor-primaria); }
+.icone-faturas {
+  width: 24px;
+  height: 24px;
+  background: currentColor;
+  mask: url("../img/faturas.svg") center / contain no-repeat;
+}
