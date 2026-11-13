@@ -30,17 +30,48 @@
       </div>
     </header>
 
-    <main class="app-conteudo" id="conteudo" aria-label="Conteúdo da página">
-      <!-- Insira aqui o conteúdo da sua história. -->
+    <div class="fatura-instalacao">
+      <label for="instalacao">Instalação:</label>
+      <select id="instalacao"><option>3013588579</option></select>
+    </div>
+
+    <main class="app-conteudo faturas" id="conteudo" aria-labelledby="titulo-faturas">
+      <h1 id="titulo-faturas">Faturas</h1>
+      <article class="fatura-cartao" aria-labelledby="fatura-mes">
+        <div class="fatura-resumo">
+          <h2 id="fatura-mes">Setembro/25</h2>
+          <span class="fatura-status">em aberto</span>
+        </div>
+        <p class="fatura-vencimento">Vence dia <strong>06/10/25</strong></p>
+        <p class="fatura-original">De <del>R$ 306,73</del> por</p>
+        <p class="fatura-valor"><small>R$</small> 260,72 <img src="../assets/img/e.svg" width="30" height="25" alt=""></p>
+        <p class="fatura-desconto">Desconto Bulbe: <strong>R$ 46,01</strong></p>
+        <div class="fatura-acoes">
+          <button type="button" disabled>Pagar com PIX <img src="../assets/img/pix.svg" width="15" height="15" alt=""></button>
+          <button class="fatura-detalhes" type="button" disabled>Ver detalhes</button>
+        </div>
+      </article>
+      <div class="fatura-indicadores" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <section aria-labelledby="titulo-historico">
+        <h2 id="titulo-historico">Histórico de faturas</h2>
+        <ul class="fatura-historico">
+          <li>Setembro <span class="fatura-status">em aberto</span><strong>R$ 260,72</strong></li>
+          <li>Agosto <span class="fatura-status paga">✓ paga</span><strong>R$ 212,20</strong></li>
+          <li>Julho <span class="fatura-status paga">✓ paga</span><strong>R$ 252,06</strong></li>
+          <li>Junho <span class="fatura-status paga">✓ paga</span><strong>R$ 242,59</strong></li>
+        </ul>
+        <button class="fatura-historico-completo" type="button" disabled>Ver histórico completo</button>
+      </section>
     </main>
 
     <nav class="app-navegacao" aria-label="Navegação principal">
       <!-- Ao implementar as páginas, conecte os destinos e mova aria-current para o item ativo. -->
-      <button class="navegacao-item" type="button">
-        <img src="../assets/img/faturas.svg" width="24" height="24" alt="">
+      <button class="navegacao-item" type="button" aria-current="page">
+        <span class="icone-faturas" aria-hidden="true"></span>
         <span>Faturas</span>
       </button>
-      <button class="navegacao-item" type="button" aria-current="page">
+      <button class="navegacao-item" type="button">
         <span class="icone-consumo" aria-hidden="true"></span>
         <span>Consumo</span>
       </button>
