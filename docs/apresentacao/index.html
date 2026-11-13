@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulbe · Apresentação final | Squad 03</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="apresentacao.css">
+  <script src="apresentacao.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="../../assets/img/logo.svg" width="100" height="29" alt="Bulbe">
+    <span>Ibmec BH <b> / </b> Squad 03</span>
+  </header>
+  <main>
+    <section class="slide abertura">
+      <div>
+        <p class="legenda">Apresentação final · Turma B · 2026.2</p>
+        <h1>Onboarding educativo com <em>simulador de economia.</em></h1>
+        <p class="subtitulo">Projeto em Ciência de Dados I</p>
+        <p>Prof. Cristiano de Macedo Neto, M.Sc</p>
+        <p class="autores">Arthur Marcelino de Oliveira<br>Gustavo Salles Pires<br>Rodrigo Marcelino de Oliveira</p>
+      </div>
+      <figure class="arte"><img src="../../assets/img/onboarding-educativo/conheca.png" alt="Fazenda solar conectada pela rede elétrica a uma casa"></figure>
+    </section>
+
+    <section class="slide" hidden>
+      <p class="legenda">O problema · Sprint I</p>
+      <h2>Dificuldades na <em>jornada do cliente.</em></h2>
+      <div class="indicadores">
+        <article><strong>27,1%</strong><h3>Primeiro acesso</h3><p>Dos 32.478 usuários analisados, essa parcela avançou além da primeira tela do aplicativo.</p></article>
+        <article><strong>≈ 20%</strong><h3>Comunicação</h3><p>Das mensagens por WhatsApp, cerca de uma em cinco falhou na entrega. Houve clientes até 20 dias sem comunicação.</p></article>
+        <article><strong>32,4%</strong><h3>Primeira fatura</h3><p>Foi a inadimplência na primeira fatura entre setembro de 2025 e julho de 2026.</p></article>
+        <article><strong>27,7%</strong><h3>Cancelamento</h3><p>Dos cancelamentos desde 2022, essa parcela foi atribuída à falta de entendimento do produto.</p></article>
+      </div>
+      <p class="resumo">O MVP busca reduzir o cancelamento no primeiro mês e a falta de pagamento da primeira fatura.</p>
+      <p class="fonte">Fonte: apresentação institucional Bulbe &amp; Ibmec (set. 2026) e materiais da Etapa 2, conforme registro da Sprint I no projeto.</p>
+    </section>
+
+    <section class="slide" hidden>
+      <p class="legenda">Escopo do protótipo</p>
+      <h2>Histórias <em>de usuário.</em></h2>
+      <div class="historias">
+        <article><h3>HU01 · Onboarding educativo</h3><p>Como novo usuário, quero entender como funciona a Bulbe e quais são os requisitos para contratação antes de me cadastrar, para decidir com segurança se o serviço atende às minhas necessidades.</p></article>
+        <article><h3>HU02 · Central de comunicações</h3><p>Como cliente recém-contratado, quero consultar os avisos da Bulbe em uma central de comunicações e confirmar meus dados de contato, para não perder informações importantes sobre minha contratação e primeira fatura.</p></article>
+        <article><h3>HU03 · Simulador de economia</h3><p>Como cliente recém-contratado, quero visualizar uma estimativa da minha economia e acompanhar quando os descontos começarão, para entender os benefícios do serviço durante a espera pela ativação.</p></article>
+        <article><h3>HU04 · Painel de economia acumulada</h3><p>Como cliente ativo, quero acompanhar minha economia mensal e acumulada desde a contratação, para avaliar os benefícios financeiros e decidir se vale a pena continuar utilizando a Bulbe.</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-pagina="login.html" hidden>
+      <p class="legenda">Ponto de entrada · Login</p>
+      <h2>Antes de <em>entrar.</em></h2>
+      <p class="resumo">No fluxo original, parte das explicações só aparece durante ou após o cadastro, que pode exigir documentos. O protótipo antecipa duas decisões: entender o serviço e estimar a economia.</p>
+      <p class="demonstracao"><b>No aplicativo</b>Escolha “Entenda como você economiza” para iniciar o percurso. “Simulador de Economia” abre a estimativa diretamente.</p>
+    </section>
+    <section class="slide" data-pagina="onboarding.html" hidden>
+      <p class="legenda">HU01 · Onboarding educativo</p>
+      <h2>Preciso instalar <em>placas solares?</em></h2>
+      <p class="persona">Mariana Costa, 27 anos · Analista administrativa</p>
+      <p class="resumo">Mariana mora de aluguel. Antes do cadastro, ela pode descobrir como os créditos chegam à conta e por que o imóvel dispensa obras.</p>
+      <p class="evidencia"><strong>27,1%</strong> dos 32.478 usuários analisados avançaram além da primeira tela. Explicar o serviço logo na entrada busca favorecer o cadastro.</p>
+      <p class="demonstracao"><b>No aplicativo</b>Avance de “Conheça a Bulbe” até os requisitos de adesão.</p>
+    </section>
+    <section class="slide" data-pagina="simulador.html" hidden>
+      <p class="legenda">HU03 · Simulador de economia</p>
+      <h2>Quando começo <em>a economizar?</em></h2>
+      <p class="persona">Fernanda Oliveira, 35 anos · Professora</p>
+      <p class="resumo">Fernanda pode simular antes do cadastro e, enquanto aguarda a ativação, consultar quando os descontos começam.</p>
+      <p class="evidencia"><strong>27,7%</strong> dos cancelamentos desde 2022 foram atribuídos à falta de entendimento do produto. Esclarecer o benefício busca reduzir desistências já no primeiro mês.</p>
+      <p class="demonstracao"><b>No aplicativo</b>Simule R$ 250,00: a estimativa ilustrativa é de R$ 30,00 por mês e R$ 360,00 por ano.</p>
+    </section>
+    <section class="slide" data-pagina="layout.html" hidden>
+      <p class="legenda">Ponto de entrada · Área do cliente</p>
+      <h2>Depois <em>da adesão.</em></h2>
+      <p class="resumo">A área de faturas situa o cliente na parte logada do protótipo. Ela serve de base para chegar às histórias de comunicação e de acompanhamento da economia.</p>
+      <p class="demonstracao"><b>No aplicativo</b>Abra o menu no canto superior esquerdo e selecione “Central de Comunicações”.</p>
+    </section>
+    <section class="slide" data-pagina="central.html" hidden>
+      <p class="legenda">HU02 · Central de comunicações</p>
+      <h2>Perdi um aviso. <em>E agora?</em></h2>
+      <p class="persona">Ricardo Almeida, 43 anos · Lojista</p>
+      <p class="resumo">Mesmo que perca uma mensagem enquanto atende na loja, Ricardo pode recuperar o aviso na central, consultar o canal de atendimento e atualizar seus contatos.</p>
+      <p class="evidencia"><strong>Cerca de 20%</strong> das mensagens por WhatsApp falharam na entrega. Manter o telefone atualizado pode evitar falhas por número incorreto.</p>
+      <p class="demonstracao"><b>No aplicativo</b>Abra um aviso e mostre onde Ricardo confirma o telefone.</p>
+    </section>
+    <section class="slide" data-pagina="painel.html" hidden>
+      <p class="legenda">HU04 · Painel de economia acumulada</p>
+      <h2>Quanto já <em>economizei?</em></h2>
+      <p class="persona">Carlos Mendes, 56 anos · Técnico aposentado</p>
+      <p class="resumo">Carlos compara meses e consulta o total economizado para decidir se a assinatura vale a pena. Tornar o benefício visível busca reduzir cancelamentos por insatisfação.</p>
+      <p class="evidencia"><strong>32,4%</strong> foi a inadimplência da primeira fatura entre set/2025 e jul/2026. Outro objetivo é ajudar o cliente a reconhecer a economia e manter os pagamentos em dia.</p>
+      <p class="demonstracao"><b>No aplicativo</b>Mostre os R$ 1.260,72 acumulados em 12 meses e compare dois meses. O histórico exibido é fictício.</p>
+    </section>
+    <section class="slide encerramento" hidden>
+      <p class="legenda">Encerramento · Squad 03</p>
+      <h2>Da primeira dúvida à <em>economia acumulada.</em></h2>
+      <p class="resumo">Mariana entende o serviço. Fernanda estima o desconto. Ricardo recupera os avisos. Carlos acompanha o resultado mês a mês.</p>
+      <p class="demonstracao"><b>Como avaliar o impacto?</b>Em um piloto, comparar a proporção de clientes que cancelam no primeiro mês e a de primeiras faturas não pagas com as de um grupo que usa o fluxo atual.</p>
+      <p class="subtitulo">Obrigado!</p>
+    </section>
+    <aside id="celular" hidden aria-label="Demonstração do aplicativo"><iframe title="Aplicativo Bulbe interativo" width="375" height="667"></iframe></aside>
+  </main>
+  <footer>
+    <div class="progresso"><span id="contador" aria-live="polite">01 / 10</span><progress value="1" max="10" aria-label="Progresso da apresentação"></progress></div>
+    <nav aria-label="Slides"><button id="anterior" aria-label="Slide anterior">←</button><button id="proximo" aria-label="Próximo slide">→</button></nav>
+  </footer>
+</body>
+</html>
